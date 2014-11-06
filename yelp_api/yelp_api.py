@@ -1,6 +1,7 @@
 import rauth
 import pprint
 import json
+import yelp_api_key as keys
 
 # This pprint part is from https://docs.python.org/2/library/pprint.html
 # While in interactive python mode python -i yelp_api.py 
@@ -25,12 +26,11 @@ def get_search_parameters(lat,long):
 
 
 def get_results(params):
- 
-    #Obtain these from Yelp's manage access page
-    consumer_key = "VCxcmeLxsCXsE9IfHkZpnw"
-    consumer_secret = "sCjJr1OUvU6krZpXMPYJyi24ywg"
-    token = "eMe2oRWzS0TyuCquawELaBupFNRPDKWf"
-    token_secret = "9HpICIJQQj7fF2JoZn9ZIBBVQtk"
+    consumer_key = keys.consumer_key
+    consumer_secret = keys.consumer_secret
+    token = keys.token
+    token_secret = keys.token_secret
+
 
     session = rauth.OAuth1Session(
     consumer_key = consumer_key
@@ -54,8 +54,8 @@ def main():
         api_calls.append(get_results(params))
         #Be a good internet citizen and rate-limit yourself
     return api_calls
-    #return api_calls
-        #time.sleep(1.0)
+    #print api_calls
+    #time.sleep(1.0)
 
 
 main()

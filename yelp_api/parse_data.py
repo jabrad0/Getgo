@@ -27,7 +27,19 @@ for business in all_business:
     longitude = business.get("location").get("coordinate").get("longitude")
     categories = business.get("categories")
 
-    my_business_dictionary[name] = [address, city, state, zip_code, neighborhoods, cross_streets, phone, url, latitude, longitude, categories]
+    my_business_dictionary[name] = {
+    "address" : address,
+    "city": city,
+    "state": state,
+    "zip_code": zip_code,
+    "neighborhoods": neighborhoods,
+    "cross_streets": cross_streets,
+    "phone": phone,
+    "url": url,
+    "latitude": latitude,
+    "longitude": longitude,
+    "categories": categories 
+    }
 
 print my_business_dictionary 
     
