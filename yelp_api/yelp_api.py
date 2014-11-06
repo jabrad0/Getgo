@@ -27,10 +27,10 @@ def get_search_parameters(lat,long):
 def get_results(params):
  
     #Obtain these from Yelp's manage access page
-    consumer_key = None
-    consumer_secret = None
-    token = None
-    token_secret = None
+    consumer_key = "VCxcmeLxsCXsE9IfHkZpnw"
+    consumer_secret = "sCjJr1OUvU6krZpXMPYJyi24ywg"
+    token = "eMe2oRWzS0TyuCquawELaBupFNRPDKWf"
+    token_secret = "9HpICIJQQj7fF2JoZn9ZIBBVQtk"
 
     session = rauth.OAuth1Session(
     consumer_key = consumer_key
@@ -53,7 +53,7 @@ def main():
         params = get_search_parameters(lat,long)
         api_calls.append(get_results(params))
         #Be a good internet citizen and rate-limit yourself
-    print api_calls
+    return api_calls
     #return api_calls
         #time.sleep(1.0)
 
