@@ -9,11 +9,8 @@ import yelp_api_key as keys
 #>>> import pprint
 #>>> pp = pprint.PrettyPrinter(indent=2)
 #>>> pp.pprint(x[0]) 
-
 pp = pprint.PrettyPrinter(indent=2)
-
 #This is from http://letstalkdata.com/2014/02/how-to-use-the-yelp-api-in-python/
-
 def get_search_parameters(lat,long):
     #See the Yelp API for more details
     params = {}
@@ -21,16 +18,14 @@ def get_search_parameters(lat,long):
     params["ll"] = "{},{}".format(str(lat),str(long))
     params["radius_filter"] = "2000"
     params["limit"] = "20"
-    #params["rating"] = "5.0"
+    #params['offset'] = "55"
     return params
-
 
 def get_results(params):
     consumer_key = keys.consumer_key
     consumer_secret = keys.consumer_secret
     token = keys.token
     token_secret = keys.token_secret
-
 
     session = rauth.OAuth1Session(
     consumer_key = consumer_key
@@ -43,21 +38,20 @@ def get_results(params):
     #Transforms the JSON API response into a Python dictionary
     data = request.json()
     session.close()
-
     return data
 
 def main():
     locations = [(37.80,-122.27),]
-    api_calls = []
+    api_calls_galleries = []
     for lat,long in locations:
         params = get_search_parameters(lat,long)
-        api_calls.append(get_results(params))
+        api_calls_galleries.append(get_results(params))
         #Be a good internet citizen and rate-limit yourself
-    return api_calls
-    #print api_calls
+    #return api_calls_galleries
+    
+    print api_calls_galleries#[0]['businesses'][0]#['name']
+
     #time.sleep(1.0)
-
-
 main()
 
 

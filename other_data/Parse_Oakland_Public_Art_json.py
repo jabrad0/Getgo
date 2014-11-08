@@ -2,9 +2,9 @@
 import json
 from pprint import pprint
 #################################
-#found this via google to help covert #unicode string dict to python dict
+#found this via google to help covert unicode string dict to a python dict
 import ast
-#found these line via google to help covert #unicode to string, also had "NoneType"
+#found these lines and function via google to help covert unicode to string, also had "NoneType"
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -16,7 +16,7 @@ def xstr(s):
     return str(s)
 ########################
 
-json_data=open('Oakland_Public_Art_Collection.json')
+json_data=open('Oakland_Public_Art_raw.json')
 data_python = json.load(json_data)
 data =  data_python.get("data")
 #data = a list
@@ -54,6 +54,6 @@ for item in data:
     "longitude" : longitude
     } 
     
-#print city_art_dictionary.get("Words by Road").get("address")
+print city_art_dictionary#.get("Words by Road").get("address")
 
 json_data.close()

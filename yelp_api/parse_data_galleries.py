@@ -1,14 +1,12 @@
-#import io
-#import json
-
-import yelp_api
+import yelp_api_galleries
 #Entire data set as python list from API call ---> 20 businesses at a time
 #My api_call only has one item [0], representing one lat,long location = Oakland
 
-api_call = yelp_api.main()
+api_call_galleries = yelp_api_galleries.main()
 #business = a dictionary of one businesse's attributes
-all_business = api_call[0].get("businesses")
-
+#print api_call_galleries
+all_business = api_call_galleries[0].get("businesses")
+#print type(all_business)
 #Itterate over api_call and create dictionary {business name : [attributes]}
 
 my_business_dictionary = {}
