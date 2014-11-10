@@ -11,15 +11,19 @@ import yelp_api_key as keys
 #>>> pp.pprint(x[0]) 
 pp = pprint.PrettyPrinter(indent=2)
 #This is from http://letstalkdata.com/2014/02/how-to-use-the-yelp-api-in-python/
-def get_search_parameters(lat,long):
+# I added offset as function parameter so I can iterate offset to get more than 20 businesses
+def get_search_parameters(latitude,longitude, offset):
     #See the Yelp API for more details
     params = {}
     params["term"] = "art galleries"
-    params["ll"] = "{},{}".format(str(lat),str(long))
+    params["ll"] = "{},{}".format(str(latitude),str(longitude))
+    #params["location"] = "Oakland"
     params["radius_filter"] = "2000"
-    params["limit"] = "20"
-    #params['offset'] = "55"
+    params["limit"] = "10"
+    params["offset"] = offset
+    #print offset
     return params
+
 
 def get_results(params):
     consumer_key = keys.consumer_key
@@ -30,7 +34,7 @@ def get_results(params):
     session = rauth.OAuth1Session(
     consumer_key = consumer_key
     ,consumer_secret = consumer_secret
-    ,access_token = token
+    ,access_token = token 
     ,access_token_secret = token_secret)
      
     request = session.get("http://api.yelp.com/v2/search",params=params)
@@ -41,16 +45,19 @@ def get_results(params):
     return data
 
 def main():
-    locations = [(37.80,-122.27),]
+    locations = [(37.80, -122.27),]
     api_calls_galleries = []
-    for lat,long in locations:
-        params = get_search_parameters(lat,long)
-        api_calls_galleries.append(get_results(params))
-        #Be a good internet citizen and rate-limit yourself
-    #return api_calls_galleries
-    
-    print api_calls_galleries#[0]['businesses'][0]#['name']
+    offset = 0
+    for i in range(6):
+        for latitude,longitude in locations:
+            params = get_search_parameters(latitude, longitude, offset)
+            offset = offset + 10
+            #print type(get_results(params))
+            api_calls_galleries.append(get_results(params))
+            #print api_calls_galleries[-1]['businesses']#[1]['name']
 
+    #print api_calls_galleries[1]#['businesses']#[0]['name']
+    return api_calls_galleries
     #time.sleep(1.0)
 main()
 
