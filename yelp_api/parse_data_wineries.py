@@ -33,5 +33,6 @@ for winery in all_wineries:
     "categories": categories 
     }
 
+    
+print len(my_wineries_dictionary) 
 print my_wineries_dictionary 
-
