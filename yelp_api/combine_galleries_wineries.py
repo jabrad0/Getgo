@@ -12,6 +12,9 @@ my_business_dictionary = {}
 #Made serval api calls and appended list with results of each, thus
 # api_call_galleries is a list of dictionaries which I need to itterate over
 # to combine into 1 dictionary
+
+#for gallery in api_call_galleries:
+#   all_business = gallery.get("business")
 for i in range(6):
     all_business = api_call_galleries[i].get("businesses")
     #print type(all_business) ---> all_business = <type "list">
@@ -20,22 +23,54 @@ for i in range(6):
 
     for business in all_business:
         name = business.get("name")
-        address = business.get("location").get("address")
-        city = business.get("location").get("city")
-        state = business.get("location").get("state_code")
-        zip_code = business.get("location").get("postal_code")
-        neighborhoods = business.get("location").get("neighborhoods")
-        cross_streets = business.get("location").get("cross_streets")
+        _loc = business.get("location")  #_loc --> notation indicates this is for me, not important part of code
+        address = _loc.get("address")
+        city = _loc.get("city")
+        state = _loc.get("state_code")
+        zip_code = _loc.get("postal_code")
+        neighborhoods = _loc.get("neighborhoods")
+        cross_streets = _loc.get("cross_streets")
         phone = business.get("display_phone")
         url = business.get("url")
-        if (business.get("location").get("coordinate")) == None:
+        if (_loc.get("coordinate")) == None:
             continue
         else:
-            latitude = (business.get("location").get("coordinate").get("latitude"))
-            longitude = (business.get("location").get("coordinate").get("longitude"))
+            latitude =  (_loc.get("coordinate").get("latitude"))
+            longitude = (_loc.get("coordinate").get("longitude"))
         categories = business.get("categories")
 
         my_business_dictionary[name] = {
+            "address" : address,
+            "city": city,
+            "state": state,
+            "zip_code": zip_code,
+            "neighborhoods": neighborhoods,
+            "cross_streets": cross_streets,
+            "phone": phone,
+            "url": url,
+            "latitude": latitude,
+            "longitude": longitude,
+            "categories": categories,  # nice practice in python to add comma  
+            #after last item so if add another item that entire line does not look like it was edited.
+            #just the line that was added will be highlighted as changed. can not do in JS
+        }
+
+for winery in all_wineries:
+    name = winery.get("name")
+    _loc = winery.get("location")
+    address = _loc.get("address")
+    city = _loc.get("city")
+    state = _loc.get("state_code")
+    zip_code = _loc.get("postal_code")
+    neighborhoods = _loc.get("neighborhoods")
+    cross_streets = _loc.get("cross_streets")
+    phone = winery.get("display_phone")
+    url = winery.get("url")
+    latitude = _loc.get("coordinate").get("latitude")
+    longitude = _loc.get("coordinate").get("longitude")
+    categories = winery.get("categories")
+
+    my_business_dictionary[name] = {
         "address" : address,
         "city": city,
         "state": state,
@@ -47,39 +82,11 @@ for i in range(6):
         "latitude": latitude,
         "longitude": longitude,
         "categories": categories 
-        }
-
-for winery in all_wineries:
-    name = winery.get("name")
-    address = winery.get("location").get("address")
-    city = winery.get("location").get("city")
-    state = winery.get("location").get("state_code")
-    zip_code = winery.get("location").get("postal_code")
-    neighborhoods = winery.get("location").get("neighborhoods")
-    cross_streets = winery.get("location").get("cross_streets")
-    phone = winery.get("display_phone")
-    url = winery.get("url")
-    latitude = winery.get("location").get("coordinate").get("latitude")
-    longitude = winery.get("location").get("coordinate").get("longitude")
-    categories = winery.get("categories")
-
-    my_business_dictionary[name] = {
-    "address" : address,
-    "city": city,
-    "state": state,
-    "zip_code": zip_code,
-    "neighborhoods": neighborhoods,
-    "cross_streets": cross_streets,
-    "phone": phone,
-    "url": url,
-    "latitude": latitude,
-    "longitude": longitude,
-    "categories": categories 
     }
 
 print len(my_business_dictionary) 
-#print my_business_dictionary.keys() 
-print my_business_dictionary     
+print my_business_dictionary.keys() 
+#print my_business_dictionary     
 
 
 """ 

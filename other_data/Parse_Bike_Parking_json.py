@@ -22,12 +22,11 @@ data =  data_python.get("features")  #---> data = a list
 #latitude = data_python.get("features")[0].get('geometry').get('coordinates')[1]
 #location_name = data_python.get('features')[0].get('properties').get('Name')
 
-
 bike_parking_dictionary = {}
 
 for item in data:
     location_name = xstr(item.get('properties').get('Name'))
-    latitude = item.get('geometry').get('coordinates')[1]      
+    latitude = item.get('geometry').get('coordinates')[1]
     longitude = item.get('geometry').get('coordinates')[0]
     address = " "
 
@@ -36,10 +35,9 @@ for item in data:
     #print type(longitude)
 
     bike_parking_dictionary[location_name] = {
-    "latitude" : latitude,
-     "longitude" : longitude
-     } 
+        "latitude" : latitude,
+        "longitude" : longitude,
+    } 
 
 print bike_parking_dictionary#.get("").get("")
-
 json_data.close()

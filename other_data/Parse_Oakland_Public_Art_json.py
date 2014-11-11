@@ -41,19 +41,18 @@ for item in data:
     #print project_title
 
     city_art_dictionary[project_title] = {
-    "year_install" : year_install,
-    "permanent" : permanent,
-    "exterior" : exterior,
-    "media_type" : media_type,
-    "media_detail" : media_detail,
-    "address" : address,
-    "city" : city,
-    "state" : state,
-    "zip_code" : zip_code,
-    "latitude" : latitude,
-    "longitude" : longitude
+        "year_install" : year_install,
+        "permanent" : permanent,
+        "exterior" : exterior,
+        "media_type" : media_type,
+        "media_detail" : media_detail,
+        "address" : address,
+        "city" : city,
+        "state" : state,
+        "zip_code" : zip_code,
+        "latitude" : latitude,
+        "longitude" : longitude,
     } 
     
 print city_art_dictionary#.get("Words by Road").get("address")
-
 json_data.close()
