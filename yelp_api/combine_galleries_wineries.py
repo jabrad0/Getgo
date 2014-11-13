@@ -9,15 +9,20 @@ api_call_wineries = yelp_api_wineries.main()
 all_wineries = api_call_wineries[0].get("businesses")
 
 my_business_dictionary = {}
-#Made serval api calls and appended list with results of each, thus
+
+#Made several api calls and appended list with results of each, thus
 # api_call_galleries is a list of dictionaries which I need to itterate over
 # to combine into 1 dictionary
 
-#for gallery in api_call_galleries:
-#   all_business = gallery.get("business")
-for i in range(6):
-    all_business = api_call_galleries[i].get("businesses")
-    #print type(all_business) ---> all_business = <type "list">
+for gallery in api_call_galleries:
+    all_business = gallery.get("businesses")
+
+#This works too but bad format to use the i like that:
+#for i in range(6):
+#    all_business = api_call_galleries[i].get("businesses")
+
+#print type(all_business) ---> all_business = <type "list">
+
 #Itterate over api_calls and create dictionary {business name : [attributes]}
 #business = a dictionary of one businesse's attributes
 

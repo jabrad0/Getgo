@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Bicycling layer</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+       /*#address {
+        background-color: red; */
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+   
+    <script>
+    function initialize() 
+    {
+      var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
+      var mapOptions = {
+        zoom: 14,
+        center: myLatlng
+      };
+      var map = new google.maps.Map(
+      document.getElementById('map-canvas'),
+      mapOptions);
+
+      var bikeLayer = new google.maps.BicyclingLayer();
+      bikeLayer.setMap(map);
+
+      var geocoder = new google.maps.Geocoder();
+      var geocoderRequest = 
+      {
+      address: "{{ address }}",
+      bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() - 1, myLatlng.lng() -1), new google.maps.LatLng(myLatlng.lat() + 1, myLatlng.lng() + 1))
+      };
+      geocoder.geocode(geocoderRequest, function(results, status) 
+      {
+      if (status === google.maps.GeocoderStatus.OK) 
+      {
+        results.forEach(function(result){
+        var marker = new google.maps.Marker({
+          position: result.geometry.location,
+          map: map,
+          title: "Current Location"});
+       });
+      } else console.log(status);
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  
+  <body>
+    <form action="/" method="POST">Starting point address:<br>
+    
+    <input type="text" name="address" id="address"> 
+    
+    <button type="submit" >Go!</button></a>
+    
+    </form>
+    
+    <div id="map-canvas"></div>
+  </body>
+
+</html>
+
+

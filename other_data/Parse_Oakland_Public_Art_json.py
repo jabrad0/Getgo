@@ -19,6 +19,12 @@ def xstr(s):
 json_data=open('Oakland_Public_Art_raw.json')
 data_python = json.load(json_data)
 data =  data_python.get("data")
+
+#i = 0
+#for art in data:
+#    print i
+ #   print data[i][8]
+  #  i += 1
 #data = a list
 
 city_art_dictionary = {}
@@ -34,7 +40,7 @@ for item in data:
     address_uni = item[16][0]
     address = ast.literal_eval(address_uni).get("address")
     city = ast.literal_eval(address_uni).get("city")
-    state = ast.literal_eval(address_uni).get("state")
+    state_code = ast.literal_eval(address_uni).get("state")
     zip_code = ast.literal_eval(address_uni).get("zip")
     latitude = float(item[16][1])
     longitude = float(item[16][2])
@@ -48,11 +54,11 @@ for item in data:
         "media_detail" : media_detail,
         "address" : address,
         "city" : city,
-        "state" : state,
+        "state_code" : state_code,
         "zip_code" : zip_code,
         "latitude" : latitude,
         "longitude" : longitude,
     } 
     
-print city_art_dictionary#.get("Words by Road").get("address")
+print city_art_dictionary.get("Spring of Wisdom").get("media_type")#.get("Words by Road").get("address")
 json_data.close()
