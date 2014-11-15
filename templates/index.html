@@ -3,64 +3,90 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Bicycling layer</title>
+    <title>Bike - Art and Wine</title>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <style>
-      html, body, #map-canvas {
+      html, body, #map-canvas {  /* # is css code referencing an ID
+      all CSS style parameters go in the style tags */
         height: 100%;
         margin: 0px;
         padding: 0px
       }
-       /*#address {
-        background-color: red; */
+      button:hover {
+        cursor: pointer;
+        background-color: #cc0;  /* yellow */
+        color: black;
       }
+      /* #address {
+        background-color: red;} */
+     
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
    
-    <script>
-    function initialize() 
-    {
+    <script> //
+    function initialize(){  // green in HTML = tag specific parameters
+    //this code initializes my map of Oakland
       var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       var mapOptions = {
         zoom: 14,
         center: myLatlng
       };
-      var map = new google.maps.Map(
-      document.getElementById('map-canvas'),
-      mapOptions);
-
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
       var bikeLayer = new google.maps.BicyclingLayer();
-      bikeLayer.setMap(map);
+        bikeLayer.setMap(map);
+     // All above code and the last line: google.maps.event.addDomListener(window, 'load', initialize);  --> comes from: https://developers.google.com/maps/documentation/javascript/examples/map-simple
 
+    //this code creates new geocoder class
       var geocoder = new google.maps.Geocoder();
-      var geocoderRequest = 
-      {
-      address: "{{ address }}",
-      bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() - 1, myLatlng.lng() -1), new google.maps.LatLng(myLatlng.lat() + 1, myLatlng.lng() + 1))
+      var geocoderRequest = {
+        address: "{{ address }}",
+        bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() - 1, myLatlng.lng() -1), new google.maps.LatLng(myLatlng.lat() + 1, myLatlng.lng() + 1))
       };
-      geocoder.geocode(geocoderRequest, function(results, status) 
-      {
-      if (status === google.maps.GeocoderStatus.OK) 
-      {
-        results.forEach(function(result){
-        var marker = new google.maps.Marker({
-          position: result.geometry.location,
-          map: map,
-          title: "Current Location"});
-       });
-      } else console.log(status);
+      geocoder.geocode(geocoderRequest, function(results, status){
+        console.log(status);
+        if (status === google.maps.GeocoderStatus.OK){
+          results.forEach(function(result){
+            var lat = result.geometry.location.lat();
+            var lng = result.geometry.location.lng();
+            //console.log(lat, lng);  
+            
+            var marker = new google.maps.Marker({position: result.geometry.location, map: map,title: "Current Location"}); 
+
+            //Now Send the user input geocoded address (lat lng) to webapp.py
+            $.post("/get_nearby_businesses", {lat: lat, lng: lng}).done(function(data){});    
+          });
+        } 
+        else console.log(status);
       });
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
+
+//Just adding another random marker -- 
+      var marker = new google.maps.Marker({
+        position: {lat: 37.8044, lng: -122.2708},
+        animation: google.maps.Animation.DROP,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+        map: map,
+        title: "Downtown"
+      });
+
+      
+      
+    }  
+// The above code was written with (some help from Jeff) using: https://developers.google.com/maps/documentation/javascript/reference#Geocoder 
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
   </head>
   
   <body>
     <form action="/" method="POST">Starting point address:<br>
-    
-    <input type="text" name="address" id="address"> 
-    
-    <button type="submit" >Go!</button></a>
-    
+        <input type="text" name="address" id="address"> 
+        <button type="submit">Go!</button>
+    </form>
+       <!--  <form action="/" method="POST">How far do you want to bike?<br>
+        <input type="text" name="miles" id="miles"> 
+        <button type="submit" >Go!</button> -->
     </form>
     
     <div id="map-canvas"></div>

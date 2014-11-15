@@ -60,5 +60,5 @@ for item in data:
         "longitude" : longitude,
     } 
     
-print city_art_dictionary.get("Spring of Wisdom").get("media_type")#.get("Words by Road").get("address")
+print city_art_dictionary.get("Tall Grass Habitat").get("uear_install")#.get("Words by Road").get("address")
 json_data.close()

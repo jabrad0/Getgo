@@ -20,7 +20,7 @@ def get_search_parameters(latitude,longitude, offset):
     params = {}
     params["term"] = "art galleries"
     params["ll"] = "{},{}".format(str(latitude),str(longitude)) # or---> params["location"] = "Oakland"
-    params["radius_filter"] = "2000"
+    params["radius_filter"] = "1609"  # search radius in meters
     params["limit"] = str(NUM_REQUESTS)
     params["offset"] = offset
     #print offset
