@@ -6,28 +6,30 @@ app = Flask (__name__)
 def helper_function():
     pass
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def home_page():
-    if request.method == 'POST':
-        address = request.form['address']
-        print "THIS IS THE ADDRESS! WOOHOO!", address
-        return render_template(("index.html"), address=address)
-
-    else:
+    address = request.args.get("address")
+    if not address:   
         address = "1807 Telegraph Avenue"
-        return render_template("index.html", address=address)
+        #pdb.set_trace()
+    print "THIS IS THE ADDRESS! WOOHOO!", address
+    return render_template("index.html", address=address)
 
 @app.route('/get_nearby_businesses', methods=["GET", "POST"])
 def get_nearby_points():
-    data = request.form
-    lat = data.get('lat')
-    lng = data.get('lng')
+    
+    lat = request.args.get("lat")
+    lng = request.args.get("lng")
+    # pdb.set_trace()
     #pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
-    print lat, lng
+    # print lat, lng
 
-    return render_template("test.html")
+    return render_template("test.html", lat=lat, lng=lng)
 
-
+# TODO: Ask instructors how to send static files
+@app.route('/js/mapping.js')
+def mapping_js():
+    return app.send_static_file('js/mapping.js')
 
 
 
