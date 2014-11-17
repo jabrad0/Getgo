@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request 
+from flask import Flask, render_template, request, jsonify 
 import pdb #python debugger
+#pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
+#import yelp_api_galleries as yelp
 
 app = Flask (__name__)
 
@@ -15,21 +17,29 @@ def home_page():
     print "THIS IS THE ADDRESS! WOOHOO!", address
     return render_template("index.html", address=address)
 
-@app.route('/get_nearby_businesses', methods=["GET", "POST"])
+@app.route('/get_nearby_businesses', methods=["GET"])
 def get_nearby_points():
-    
     lat = request.args.get("lat")
     lng = request.args.get("lng")
-    # pdb.set_trace()
-    #pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
-    # print lat, lng
+    return jsonify(latitude=lat, longitude=lng)  
+    #return render_template("test.html") 
 
-    return render_template("test.html", lat=lat, lng=lng)
 
-# TODO: Ask instructors how to send static files
+#access yelp_api_galleries
+#insert lat lng params into function
+  
+   
 @app.route('/js/mapping.js')
 def mapping_js():
     return app.send_static_file('js/mapping.js')
+
+
+
+
+
+
+
+
 
 
 

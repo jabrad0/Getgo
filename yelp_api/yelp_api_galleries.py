@@ -1,6 +1,7 @@
 import rauth
 import json
 import yelp_api_key as keys
+
 #See the official Yelp API for more details: http://www.yelp.com/developers/documentation
 
 NUM_REQUESTS = 10
