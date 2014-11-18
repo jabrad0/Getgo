@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, jsonify 
 import pdb #python debugger
 #pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
-#import yelp_api_galleries as yelp
+import json
+import combine_galleries_wineries as yelp
+import pprint
+
 
 app = Flask (__name__)
-
-def helper_function():
-    pass
-
+#pdb.set_trace
 @app.route('/', methods=["GET"])
 def home_page():
     address = request.args.get("address")
@@ -19,11 +19,16 @@ def home_page():
 
 @app.route('/get_nearby_businesses', methods=["GET"])
 def get_nearby_points():
-    lat = request.args.get("lat")
-    lng = request.args.get("lng")
-    return jsonify(latitude=lat, longitude=lng)  
-    #return render_template("test.html") 
-
+    latitude = float(request.args.get("lat"))
+    print latitude 
+    longitude = float(request.args.get("lng"))
+    print longitude
+    #points = jsonify(latitude=lat, longitude=lng)  
+    yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
+    yelp_call_results_json = json.dumps(yelp_call_results)
+    return yelp_call_results_json
+    
+    #return render_template("test.html", lat = latitude, lng = longitude) #orange = html
 
 #access yelp_api_galleries
 #insert lat lng params into function
@@ -32,36 +37,6 @@ def get_nearby_points():
 @app.route('/js/mapping.js')
 def mapping_js():
     return app.send_static_file('js/mapping.js')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@app.route('/helloworld', methods=["GET", "POST"])
-def say_hi():
-    return "Hello World"
-
-@app.route("/page2", methods=["GET"])
-def go_to_page2():
-    return render_template("page2.html") #will go look in templates for this file
-
-
-
-
-
 
 
 if __name__ == "__main__":

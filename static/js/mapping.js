@@ -17,7 +17,12 @@
           //Now Send the user input geocoded address (lat lng) to webapp.py
         
         $.get("/get_nearby_businesses", {lat: lat, lng: lng}).done(function(data){
+        
         console.log(data); //debugger;
+        
+
+
+
         //alert(data);
         });
       } 

@@ -10,15 +10,15 @@ import yelp_api_key as keys
 #>>> pp = pprint.PrettyPrinter(indent=2)
 #>>> pp.pprint(x[0]) 
 
-pp = pprint.PrettyPrinter(indent=2)
+#pp = pprint.PrettyPrinter(indent=2)
 
 #This is from http://letstalkdata.com/2014/02/how-to-use-the-yelp-api-in-python/
 
-def get_search_parameters(lat,long_):
+def get_search_parameters(latitude, longitude):
     #See the Yelp API for more details
     params = {}
     params["term"] = "wineries"
-    params["ll"] = "{},{}".format(str(lat),str(long_))
+    params["ll"] = "{},{}".format(str(latitude),str(longitude))
     params["radius_filter"] = "2000"
     params["limit"] = "20"
     #params["rating"] = "5.0"
@@ -47,11 +47,11 @@ def get_results(params):
 
     return data
 
-def main():
-    locations = [(37.80, -122.27),]
+def main(latitude, longitude):
+    locations = [(latitude, longitude),]
     api_calls_wineries = []
-    for lat, long_ in locations:
-        params = get_search_parameters(lat, long_)
+    for latitude, longitude in locations:
+        params = get_search_parameters(latitude, longitude)
         api_calls_wineries.append(get_results(params))
         #Be a good internet citizen and rate-limit yourself
     #print api_calls_wineries
@@ -59,6 +59,5 @@ def main():
     #time.sleep(1.0)
 
 
-x = main()
 
 
