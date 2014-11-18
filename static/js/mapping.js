@@ -11,15 +11,29 @@
         var lat = result.geometry.location.lat();
         var lng = result.geometry.location.lng();
           //console.log(lat, lng);  
-          
+        var infoWindow = new google.maps.InfoWindow();
         var marker = new google.maps.Marker({position: result.geometry.location, map: map,title: "Starting Point"}); 
+	google.maps.event.addListener(marker, 'click', function() {
+		infoWindow.setContent('This is your starting location!');
+		infoWindow.open(map, marker);
+	});
         
           //Now Send the user input geocoded address (lat lng) to webapp.py
         
-        $.get("/get_nearby_businesses", {lat: lat, lng: lng}).done(function(data){
+        $.getJSON("/get_nearby_businesses", {lat: lat, lng: lng}).done(function(data){
         
         console.log(data); //debugger;
-        
+        	Object.keys(data).forEach(function(title) {
+			var location = data[title];
+			var marker = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(location.latitude, location.longitude)
+			});
+			google.maps.event.addListener(marker, 'click', function() {
+				infoWindow.setContent('<h3>' + title + '</h3><div>' + location.address.join('<br />') + '<br />' + [location.city, location.state, location.zip_code].join(' ') + '</div>');
+				infoWindow.open(map, marker);
+			});
+		});
 
 
 
