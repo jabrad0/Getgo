@@ -34,7 +34,7 @@
         //convert object to array and forEach itterates over, basically  
         Object.keys(data).forEach (function(title) {
          //console.log(title);
-                  
+         //debugger         
           var attributes = data[title];
           //console.log(attributes.address[0]);
           //console.log(attributes.url);
@@ -44,7 +44,7 @@
             map: map,
             animation: google.maps.Animation.DROP,
             position: new google.maps.LatLng(attributes.latitude, attributes.longitude),
-            //title: Object.keys(data),
+            title: title,
             icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
             //info: '<h3>' + title + '</h3><div>'+ attributes.address[0]
           });
@@ -53,7 +53,7 @@
           //maxWidth: 200
           google.maps.event.addListener(marker_businesses, 'click', function() {
             infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a></div>');  
-
+            alert("clicked " + attributes.latitude);
             //infowindow.setContent(this.info);  could also do this
             infowindow.open(map, marker_businesses);
           });

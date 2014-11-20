@@ -1,0 +1,863 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "fw6y-ui8e",
+      "name" : "City of Oakland Public Art Collection",
+      "attribution" : "City of Oakland, Cultural Arts and Marketing",
+      "averageRating" : 0,
+      "createdAt" : 1357848293,
+      "displayType" : "table",
+      "downloadCount" : 155,
+      "indexUpdatedAt" : 1414727800,
+      "licenseId" : "CC0_10",
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 2389548,
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1359609705,
+      "publicationGroup" : 606354,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1359609657,
+      "rowsUpdatedBy" : "rwck-id6a",
+      "tableId" : 647405,
+      "totalTimesRated" : 0,
+      "viewCount" : 311,
+      "viewLastModified" : 1359667742,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 42153725,
+        "name" : "Project Name",
+        "dataTypeName" : "text",
+        "fieldName" : "project_name",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798307,
+        "width" : 244,
+        "cachedContents" : {
+          "non_null" : 89,
+          "smallest" : "\"Unity,\" Mandela Gateway Sculptures",
+          "null" : 1,
+          "largest" : "WOYDC ",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Fruitvale Pedestrian Plaza"
+          }, {
+            "count" : 19,
+            "item" : "Our Oakland: Eastside Stories (East Oakland-81st Avenue Community Library)"
+          }, {
+            "count" : 18,
+            "item" : "Generations (Fire Station 18)"
+          }, {
+            "count" : 17,
+            "item" : "Lake Merritt to Oakland Estuary Channel"
+          }, {
+            "count" : 16,
+            "item" : "Lake Merritt 12th Street"
+          }, {
+            "count" : 15,
+            "item" : "10,000 Steps"
+          }, {
+            "count" : 14,
+            "item" : "Once Upon a Time Happily Every After"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153726,
+        "name" : "Artist Name",
+        "dataTypeName" : "text",
+        "fieldName" : "artist_name",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798308,
+        "width" : 232,
+        "cachedContents" : {
+          "non_null" : 89,
+          "smallest" : "Alex Champion",
+          "null" : 1,
+          "largest" : "Woody Johnson",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Daniel Galvez and Jos Sances"
+          }, {
+            "count" : 19,
+            "item" : "Rene Yung"
+          }, {
+            "count" : 18,
+            "item" : "Laurel True"
+          }, {
+            "count" : 17,
+            "item" : "John Roloff and Lewis deSoto"
+          }, {
+            "count" : 16,
+            "item" : "John Colle Rogers and Todd Blair (team)"
+          }, {
+            "count" : 15,
+            "item" : "David Stern Gottfried- City Canvas"
+          }, {
+            "count" : 14,
+            "item" : "Marksearch (Sue Mark and Bruce Douglas)"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153727,
+        "name" : "Artist Location",
+        "dataTypeName" : "text",
+        "fieldName" : "artist_location",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798309,
+        "width" : 280,
+        "cachedContents" : {
+          "non_null" : 83,
+          "smallest" : "Alameda, CA",
+          "null" : 7,
+          "largest" : "Venice CA",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Alameda, CA"
+          }, {
+            "count" : 19,
+            "item" : "Oakland"
+          }, {
+            "count" : 18,
+            "item" : "North Carolina"
+          }, {
+            "count" : 17,
+            "item" : "San Francisco"
+          }, {
+            "count" : 16,
+            "item" : "San Francisco "
+          }, {
+            "count" : 15,
+            "item" : "Berkeley and San Francisco"
+          }, {
+            "count" : 14,
+            "item" : "Mass./Greenbrae CA"
+          }, {
+            "count" : 13,
+            "item" : "San Francisco (?)"
+          }, {
+            "count" : 12,
+            "item" : "Richmond"
+          }, {
+            "count" : 11,
+            "item" : "San Francisco and Los Gatos"
+          }, {
+            "count" : 10,
+            "item" : "Davis"
+          }, {
+            "count" : 9,
+            "item" : "Berkeley "
+          }, {
+            "count" : 8,
+            "item" : "Emeryville"
+          }, {
+            "count" : 7,
+            "item" : "Penngrove"
+          }, {
+            "count" : 6,
+            "item" : "San Jose"
+          }, {
+            "count" : 5,
+            "item" : "Berkeley"
+          }, {
+            "count" : 4,
+            "item" : "Venice CA"
+          }, {
+            "count" : 3,
+            "item" : "San Francisco?"
+          }, {
+            "count" : 2,
+            "item" : "Sebastopol"
+          }, {
+            "count" : 1,
+            "item" : "Portland, OR"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153728,
+        "name" : "Year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 6798310,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 87,
+          "smallest" : "1978",
+          "sum" : "173891",
+          "null" : 3,
+          "average" : "1998.747126436782",
+          "largest" : "2010",
+          "top" : [ {
+            "count" : 20,
+            "item" : "1978"
+          }, {
+            "count" : 19,
+            "item" : "1990"
+          }, {
+            "count" : 18,
+            "item" : "1991"
+          }, {
+            "count" : 17,
+            "item" : "1992"
+          }, {
+            "count" : 16,
+            "item" : "1993"
+          }, {
+            "count" : 15,
+            "item" : "1994"
+          }, {
+            "count" : 14,
+            "item" : "1995"
+          }, {
+            "count" : 13,
+            "item" : "1996"
+          }, {
+            "count" : 12,
+            "item" : "1997"
+          }, {
+            "count" : 11,
+            "item" : "1998"
+          }, {
+            "count" : 10,
+            "item" : "1999"
+          }, {
+            "count" : 9,
+            "item" : "2000"
+          }, {
+            "count" : 8,
+            "item" : "2001"
+          }, {
+            "count" : 7,
+            "item" : "2002"
+          }, {
+            "count" : 6,
+            "item" : "2003"
+          }, {
+            "count" : 5,
+            "item" : "2005"
+          }, {
+            "count" : 4,
+            "item" : "2006"
+          }, {
+            "count" : 3,
+            "item" : "2007"
+          }, {
+            "count" : 2,
+            "item" : "2008"
+          }, {
+            "count" : 1,
+            "item" : "2009"
+          } ]
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "align" : "right",
+          "noCommas" : "true"
+        }
+      }, {
+        "id" : 42153729,
+        "name" : "Temporary / Permanent",
+        "dataTypeName" : "text",
+        "fieldName" : "temporary_permanent",
+        "position" : 6,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798311,
+        "width" : 352,
+        "cachedContents" : {
+          "non_null" : 90,
+          "smallest" : "long term temp",
+          "null" : 0,
+          "largest" : "temporary; removed",
+          "top" : [ {
+            "count" : 20,
+            "item" : "permanent"
+          }, {
+            "count" : 19,
+            "item" : "permanent: purchase as part of Public Domain Project"
+          }, {
+            "count" : 18,
+            "item" : "temporary"
+          }, {
+            "count" : 17,
+            "item" : "long term temporary"
+          }, {
+            "count" : 16,
+            "item" : "long term temp"
+          }, {
+            "count" : 15,
+            "item" : "temporary; removed"
+          }, {
+            "count" : 14,
+            "item" : "Permanent"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153730,
+        "name" : "Interior / Exterior",
+        "dataTypeName" : "text",
+        "fieldName" : "interior_exterior",
+        "position" : 7,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798312,
+        "width" : 328,
+        "cachedContents" : {
+          "non_null" : 87,
+          "smallest" : "both",
+          "null" : 3,
+          "largest" : "interior",
+          "top" : [ {
+            "count" : 20,
+            "item" : "exterior"
+          }, {
+            "count" : 19,
+            "item" : "interior"
+          }, {
+            "count" : 18,
+            "item" : "both"
+          }, {
+            "count" : 17,
+            "item" : "exterior / interior"
+          }, {
+            "count" : 16,
+            "item" : "exterior & interior"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153732,
+        "name" : "Media",
+        "dataTypeName" : "text",
+        "fieldName" : "media",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798314,
+        "width" : 160,
+        "cachedContents" : {
+          "non_null" : 84,
+          "smallest" : "*budget from PWA",
+          "null" : 6,
+          "largest" : "Window Treatments",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Mural(s)"
+          }, {
+            "count" : 19,
+            "item" : "Painting"
+          }, {
+            "count" : 18,
+            "item" : "Sculpture"
+          }, {
+            "count" : 17,
+            "item" : "Glass"
+          }, {
+            "count" : 16,
+            "item" : "Mural-Mix Media"
+          }, {
+            "count" : 15,
+            "item" : "Mural (ceramic)"
+          }, {
+            "count" : 14,
+            "item" : "Mural"
+          }, {
+            "count" : 13,
+            "item" : "Banners"
+          }, {
+            "count" : 12,
+            "item" : "Scupture"
+          }, {
+            "count" : 11,
+            "item" : "*confirm art budget"
+          }, {
+            "count" : 10,
+            "item" : "Sculptures"
+          }, {
+            "count" : 9,
+            "item" : "Glass and Digital Storyteller"
+          }, {
+            "count" : 8,
+            "item" : "Mosaic Panels"
+          }, {
+            "count" : 7,
+            "item" : "LED Media Work"
+          }, {
+            "count" : 6,
+            "item" : "Sculptures, LEDs"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153733,
+        "name" : "Media Detail",
+        "dataTypeName" : "text",
+        "fieldName" : "media_detail",
+        "position" : 10,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798315,
+        "width" : 244,
+        "cachedContents" : {
+          "non_null" : 79,
+          "smallest" : "1/4\" Aluminum",
+          "null" : 11,
+          "largest" : "Wooden boat, plants",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Various Materials"
+          }, {
+            "count" : 19,
+            "item" : "Mural Paint"
+          }, {
+            "count" : 18,
+            "item" : "Granite"
+          }, {
+            "count" : 17,
+            "item" : "Canvas, Mural Paint, 30 Banners"
+          }, {
+            "count" : 16,
+            "item" : "Bronze"
+          }, {
+            "count" : 15,
+            "item" : "Bronze and granite"
+          }, {
+            "count" : 14,
+            "item" : "Glass panels, iron rails, steel door handles"
+          }, {
+            "count" : 13,
+            "item" : "Aluminum, enamel, stainless steel"
+          }, {
+            "count" : 12,
+            "item" : "Bronze, stainless steel"
+          }, {
+            "count" : 11,
+            "item" : "Stainless steel, cement"
+          }, {
+            "count" : 10,
+            "item" : "Black granite, lithichrome paint, porcelain"
+          }, {
+            "count" : 9,
+            "item" : "Canvas, ink, oil paint, varnish"
+          }, {
+            "count" : 8,
+            "item" : "Forged and reclaimed steel"
+          }, {
+            "count" : 7,
+            "item" : "Concrete, bronze"
+          }, {
+            "count" : 6,
+            "item" : "metal archway sculptures"
+          }, {
+            "count" : 5,
+            "item" : "series of cast-relief and mosaic artworks"
+          }, {
+            "count" : 4,
+            "item" : "Wooden boat, plants"
+          }, {
+            "count" : 3,
+            "item" : "Cartoneria"
+          }, {
+            "count" : 2,
+            "item" : "interactive water sculpture"
+          }, {
+            "count" : 1,
+            "item" : "murals and fence art treatments "
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 42153734,
+        "name" : "Location (District/Neighborhood)",
+        "dataTypeName" : "location",
+        "fieldName" : "location_district_neighborhood",
+        "position" : 11,
+        "renderTypeName" : "location",
+        "tableColumnId" : 6798316,
+        "width" : 484,
+        "cachedContents" : {
+          "non_null" : 90,
+          "smallest" : {
+            "longitude" : "-122.27301999967312",
+            "latitude" : "37.80505999961946",
+            "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+          },
+          "null" : 0,
+          "largest" : {
+            "longitude" : "-122.27301999967312",
+            "latitude" : "37.80505999961946",
+            "human_address" : "{\"address\":\"West Oakland Senior Center,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+          },
+          "top" : [ {
+            "count" : 20,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 19,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 18,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 17,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 16,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 15,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 14,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          }, {
+            "count" : 13,
+            "item" : {
+              "longitude" : "-122.27301999967312",
+              "latitude" : "37.80505999961946",
+              "human_address" : "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}"
+            }
+          } ]
+        },
+        "format" : {
+        },
+        "subColumnTypes" : [ "human_address", "latitude", "longitude", "machine_address", "needs_recoding" ]
+      }, {
+        "id" : 42153735,
+        "name" : "Location (Address)",
+        "dataTypeName" : "text",
+        "fieldName" : "location_address",
+        "position" : 12,
+        "renderTypeName" : "text",
+        "tableColumnId" : 6798317,
+        "width" : 316,
+        "cachedContents" : {
+          "non_null" : 74,
+          "smallest" : "(14th St.) and 12th St.",
+          "null" : 16,
+          "largest" : "West Oakland Senior Center, ",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Joaquin Miller Community Center, 3594 Sanborn Drive"
+          }, {
+            "count" : 19,
+            "item" : "1428 Alice Street, Downtown/City Center."
+          }, {
+            "count" : 18,
+            "item" : "City Hall, 1 Frank H. Ogawa Plaza."
+          }, {
+            "count" : 17,
+            "item" : "Frank H. Ogawa Plaza"
+          }, {
+            "count" : 16,
+            "item" : "1006 Amito Drive"
+          }, {
+            "count" : 15,
+            "item" : "Estuary Park on Embarcadero East,"
+          }, {
+            "count" : 14,
+            "item" : "463 51st Street"
+          }, {
+            "count" : 13,
+            "item" : "14th Street"
+          }, {
+            "count" : 12,
+            "item" : "11th Avenue "
+          }, {
+            "count" : 11,
+            "item" : "Entrance to Valley Children's Zoo"
+          }, {
+            "count" : 10,
+            "item" : "Lake Merritt, District 3"
+          }, {
+            "count" : 9,
+            "item" : "César E. Chávez Branch Library, District 5 (debut)"
+          }, {
+            "count" : 8,
+            "item" : "Museum of Children's Art, Swan's Market Courtyard, District 3"
+          }, {
+            "count" : 7,
+            "item" : "Peralta Elementary, District 1"
+          }, {
+            "count" : 6,
+            "item" : "55th Street Community Garden, District 1"
+          }, {
+            "count" : 5,
+            "item" : "Aquatic Park"
+          }, {
+            "count" : 4,
+            "item" : "Oakland Coliseum InterCity Rail Station"
+          }, {
+            "count" : 3,
+            "item" : "Broadway/I-880 Underpass"
+          }, {
+            "count" : 2,
+            "item" : "City Hall Plaza, 250 FOP"
+          }, {
+            "count" : 1,
+            "item" : "Mandela Parkway at 14th"
+          } ]
+        },
+        "format" : {
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Creative Commons 1.0 Universal",
+        "logoUrl" : "images/licenses/ccZero.png",
+        "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+      },
+      "metadata" : {
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "thumbnail" : {
+          "page" : {
+            "created" : true,
+            "selection" : {
+              "height" : 224,
+              "width" : 421,
+              "y1" : 124,
+              "y2" : 348,
+              "x2" : 625,
+              "x1" : 204
+            },
+            "filename" : "page.png-421.224.204.124.png"
+          }
+        }
+      },
+      "owner" : {
+        "id" : "rwck-id6a",
+        "displayName" : "CityofOakland",
+        "profileImageUrlLarge" : "/images/profile/9478/6160/FB_icon_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/9478/6160/FB_icon_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/9478/6160/FB_icon_tiny.jpg",
+        "roleName" : "publisher",
+        "screenName" : "CityofOakland",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards" ]
+      },
+      "query" : {
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "rwck-id6a",
+        "displayName" : "CityofOakland",
+        "profileImageUrlLarge" : "/images/profile/9478/6160/FB_icon_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/9478/6160/FB_icon_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/9478/6160/FB_icon_tiny.jpg",
+        "roleName" : "publisher",
+        "screenName" : "CityofOakland",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards" ]
+      },
+      "tags" : [ "art" ],
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 1, "1441FAC0-ACE9-4E02-B8DB-DA4368A7F2CD", 1, 1357848295, "400373", 1357848303, "400373", "{\n}", "Gateway to Knowledge", "Ed Cassel", "Alameda, CA", "1978", "permanent", "exterior", "Mural(s)", "acrylic mural", [ "{\"address\":\"Oakland Main Public Library, 125 - 14th St.,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80125934792801", "-122.26349285059729", null, false ], "Oakland Main Public Library, 125 - 14th St.," ]
+, [ 2, "B2483B9D-47CE-4BC8-845D-DF8F23CAABB7", 2, 1357848295, "400373", 1357848306, "400373", "{\n}", "Welcome Home Boys", "Ralph Fasanella", null, "1990", "permanent: purchase as part of Public Domain Project", "interior", "Painting", "Oil on canvas", [ "{\"address\":\"Oakland Main Public Library 125 - 14th Street,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80125934792801", "-122.26349285059729", null, false ], "Oakland Main Public Library 125 - 14th Street," ]
+, [ 3, "152AA56E-9AFA-4AF8-BD00-AAE1524C8B05", 3, 1357848295, "400373", 1357848304, "400373", "{\n}", "Empty Chairs / Missing Persons", "Kati Casida", null, "1991", "temporary", "exterior", "Sculpture", "150 chairs, green ribbon", [ "{\"address\":\"Greek Orthodox Church of the Ascension, 4700 Lincoln Avenue\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.81037117066563", "-122.20071875633192", null, false ], "Greek Orthodox Church of the Ascension, 4700 Lincoln Avenue" ]
+, [ 4, "BA30D6FB-52A4-46D6-9405-A36E36A8623C", 4, 1357848295, "400373", 1357848306, "400373", "{\n}", "Words by Road", "Seyed Alavi", "Oakland", "1991", "temporary", "exterior", "Mural(s)", "murals", [ "{\"address\":\"Interstate 580 underpasses at MacArthur Blvd., High St., Fruitvale Ave., and Park\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Interstate 580 underpasses at MacArthur Blvd., High St., Fruitvale Ave., and Park" ]
+, [ 5, "5BA27891-6048-4248-A1DD-85237CDFB086", 5, 1357848295, "400373", 1357848305, "400373", "{\n}", "Binding Ties", "Stephanie A. Johnson", null, "1991", "temporary", "exterior", "Video installation", null, [ "{\"address\":\"Southern Pacific 16th Street Station,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Southern Pacific 16th Street Station," ]
+, [ 6, "EFF309EF-5A48-430A-BC35-EA35C0FCD2C2", 6, 1357848295, "400373", 1359609633, "400373", "{}", "Earth Maze", "Alex Champion", null, "1992", "long term temporary", "exterior", "Installation-Earthwork", "Earth, grass, basalt key", [ "{\"address\":\"Oakland&rsquo;s Lakeside Park,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Oakland’s Lakeside Park," ]
+, [ 7, "3353E1F4-52C2-4438-A933-85BBAFD12604", 7, 1357848295, "400373", 1357848304, "400373", "{\n}", "Joaquin Miller Community Center Fireplace", "Martha Heavenston", "Oakland", "1992", "permanent", "interior", null, "Portland cement, clay, ceramic tile, glaze", [ "{\"address\":\"Joaquin Miller Community Center, 3594 Sanborn Drive\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Joaquin Miller Community Center, 3594 Sanborn Drive" ]
+, [ 8, "099D0623-6623-44C2-B1C5-05707CD7DD4E", 8, 1357848295, "400373", 1357848303, "400373", "{\n}", "Joaquin Miller Community Center Doors and Skylights", "Carl Powell", "North Carolina", "1992", "permanent", "interior", "architecturally integrated glass", "glass", [ "{\"address\":\"Joaquin Miller Community Center, 3594 Sanborn Drive\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Joaquin Miller Community Center, 3594 Sanborn Drive" ]
+, [ 9, "045D47C0-46B4-4C87-BE76-1BF64E41A468", 9, 1357848295, "400373", 1357848303, "400373", "{\n}", "Untitled", "Narcissus Quagliata", null, "1992", "permanent", "interior", "Glass", "Stained, beveled, leaded glass; blown glass", [ "{\"address\":\"1428 Alice Street, Downtown/City Center.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "1428 Alice Street, Downtown/City Center." ]
+, [ 10, "B38EF704-A97E-45C1-8DC3-7609D7AF4BB1", 10, 1357848295, "400373", 1357848306, "400373", "{\n}", "ARS, VITA, SPIRTU", "David Hisaya Asari", "Oakland", "1992", "long term temp", "exterior", "20’ x 4’ (6 banners)", "Silkscreen on vinyl", [ "{\"address\":\"1428 Alice Street, Downtown/City Center.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "1428 Alice Street, Downtown/City Center." ]
+, [ 11, "4185DD3A-E530-4AD9-87E2-BC5323DEB1B1", 11, 1357848295, "400373", 1357848304, "400373", "{\n}", "Untitled", "Dan Fenton", "Oakland", "1992", "permanent", "interior", "Glass", "6’ x 225’ Fused Glass Tilework", [ "{\"address\":\"1428 Alice Street, Downtown/City Center.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "1428 Alice Street, Downtown/City Center." ]
+, [ 12, "2096AC93-2D0E-4662-B12E-03EECCCBCDF8", 12, 1357848295, "400373", 1357848304, "400373", "{\n}", "Resurreción", "Mary Lovelace O’Neal", "Oakland", "1992", "long term temp", "interior", "Painting", "6' x 35' Acrylic on wood", [ "{\"address\":\"1428 Alice Street, Downtown/City Center.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "1428 Alice Street, Downtown/City Center." ]
+, [ 13, "5B372961-C446-4CE9-A5E3-09482FB3A94C", 13, 1357848295, "400373", 1357848305, "400373", "{\n}", "Alice Arts Center Ceramics", "Hitoshi Sasaki", "San Francisco", "1992", "permanent", "interior", "Mural-Mix Media", "Ceramic tile with glazes and epoxy paint on aluminum", [ "{\"address\":\"1428 Alice Street, Downtown/City Center.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "1428 Alice Street, Downtown/City Center." ]
+, [ 14, "E856B1F7-B630-403A-B13C-434AF6977DC0", 14, 1357848295, "400373", 1357848307, "400373", "{\n}", "Rockridge Branch Library", "Anna Valentina Murch", "San Francisco ", "1992", "permanent", "interior", "Window Treatments", "Glass and Steel", [ "{\"address\":\"5366 College Avenue,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.83935706924517", "-122.2512584503028", null, false ], "5366 College Avenue," ]
+, [ 15, "1A352EA7-357C-4E05-BBD5-5F45CFDC33A3", 15, 1357848295, "400373", 1357848304, "400373", "{\n}", "Dignity House Murals", "Ann Sherry and Horace Washington", "Oakland", "1992", "permanent", "exterior", "Mural (ceramic)", "12’ x 13’ handcrafted Ceramic", [ "{\"address\":\"James Lee Court/Dignity West\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "James Lee Court/Dignity West" ]
+, [ 16, "BE0FCE93-785A-4D2A-A3E3-4E797E1DA3D0", 16, 1357848295, "400373", 1357848306, "400373", "{\n}", "Honoring Nature—After the Earthquake 1990", "Caryl Henry", "Oakland", "1992", "temporary", "exterior", "Mural", "Plywood and Nova Color paint", [ "{\"address\":\"Broadway Building\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.798763729296724", "-122.2746354505403", null, false ], "Broadway Building" ]
+, [ 17, "531199DB-D597-4F47-9BF4-8C0504E9153A", 17, 1357848295, "400373", 1357848305, "400373", "{\n}", "N.E.L. NO!", "Eduardo Pineda and Ray Patlan", "Berkeley and San Francisco", "1992", "temporary", "exterior", "Mural", "Acrylic Paint on Concrete 20' x 60' ", [ "{\"address\":\"East 14th Street\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.79811632607474", "-122.25837284075023", null, false ], "East 14th Street" ]
+, [ 18, "4672A788-B218-490C-B53F-4508B282C2CE", 18, 1357848295, "400373", 1359609649, "400373", "{}", "Chairs of Life", "Candi Farlice", "Oakland", "1993", "temporary; removed", "exterior", "Sculpture", null, [ "{\"address\":\"Hardy Park, 491 Hardy Street,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.84202012861456", "-122.25718721053968", null, false ], "Hardy Park, 491 Hardy Street," ]
+, [ 19, "057C8423-61DB-46A8-8DE4-D33A9D05C8BE", 19, 1357848295, "400373", 1357848303, "400373", "{\n}", "Twist of Fate", "Daniel Galvez", "Oakland", "1993", "temporary", "exterior", "Mural", "Oil on wood, UV varnish 8' x 220'", [ "{\"address\":\"1 Frank Ogawa Plaza\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80518938519606", "-122.27228822004383", null, false ], "1 Frank Ogawa Plaza" ]
+, [ 20, "975FE44B-2E4D-40A4-87C4-EBF27E1DA3EC", 20, 1357848295, "400373", 1359609657, "400373", "{}", "Pool", "Michael Mandel and Larry Sultan", "Mass./Greenbrae CA", "1993", "permanent", "exterior", "Mural (ceramic)", "18' x 5' Each Façade", [ "{\"address\":\"DeFremery Pool\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "DeFremery Pool" ]
+, [ 21, "A6C0C0BA-AC8B-4C8C-A6EE-2EC67F1CE5EE", 21, 1357848295, "400373", 1357848306, "400373", "{\n}", "West Oakland Senior Center Public Art Project", "April Watkins, Marie Johnson Calloway, Heather Watkins", "Oakland", "1993", "permanent", "interior", "Mural (s)", "Ceramic, Mix-media", [ "{\"address\":\"West Oakland Senior Center,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "West Oakland Senior Center, " ]
+, [ 22, "A3E7BD93-B3B8-4209-8296-DE4922790584", 22, 1357848295, "400373", 1357848306, "400373", "{\n}", "Vertical Parking", "Steve Gillman", "Oakland", "1993", "temporary", "exterior", "Mixed Media Sculpture", null, [ "{\"address\":\"San Pablo Ave. and 14th St,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80431704282762", "-122.27120004038841", null, false ], "San Pablo Ave. and 14th St," ]
+, [ 23, "D74C5CA7-7652-49E7-A6FA-C269E9AF05A4", 23, 1357848295, "400373", 1357848306, "400373", "{\n}", "Tassafaronga Gym", "Joe Sam", "San Francisco", "1993", "permanent", "exterior", "Mural-Mix Media", "1/4\" Aluminum", [ "{\"address\":\"Tassafaronga Gym\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Tassafaronga Gym" ]
+, [ 24, "F2FB42A9-8A12-473E-8765-46264A75B8CB", 24, 1357848295, "400373", 1357848307, "400373", "{\n}", "Montclair Duck Pond Mural", "Dan Fontes", "Oakland", "1994", "permanent", "exterior", "Mural", "Acrylic Paint", [ "{\"address\":\"6300 Moraga Ave\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.828526809031004", "-122.21243443299211", null, false ], "6300 Moraga Ave" ]
+, [ 25, "DAA8AD1D-E26E-4B25-A282-67BBC4B1A79E", 25, 1357848295, "400373", 1357848306, "400373", "{\n}", "3 Amish Quilts", "Estelle Akamine", "San Francisco", "1994", "permanent", "interior", "Mural-Mix Media", "Aluminum wire, gesso, acrylic paint", [ "{\"address\":\"City Hall, 1 Frank H. Ogawa Plaza.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80518938519606", "-122.27228822004383", null, false ], "City Hall, 1 Frank H. Ogawa Plaza." ]
+, [ 26, "E1F08007-AA9A-47E1-877B-77E10FE40B7A", 26, 1357848295, "400373", 1357848306, "400373", "{\n}", "Land of Oaks with Swirls", "Leo Hobaica", "Oakland", "1994", "permanent", "interior", "Sculpture ", "Fiberglass, “Kinwashi” paper,", [ "{\"address\":\"City Hall, 1 Frank H. Ogawa Plaza.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80518938519606", "-122.27228822004383", null, false ], "City Hall, 1 Frank H. Ogawa Plaza." ]
+, [ 27, "82A3338B-85AA-40C7-9F13-58B88F7DF36C", 27, 1357848295, "400373", 1357848305, "400373", "{\n}", "Vermillion Bird", "Patricia Ravarra", "San Francisco (?)", "1994", "permanent", "interior", "Mural-Mix Media", "Nine panels, each 8’3” x 33”, Monofilamnet, Plexiglass", [ "{\"address\":\"City Hall, 1 Frank H. Ogawa Plaza.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80518938519606", "-122.27228822004383", null, false ], "City Hall, 1 Frank H. Ogawa Plaza." ]
+, [ 28, "8F93DB04-7F76-4D35-954C-7172AEAC61FE", 28, 1357848295, "400373", 1357848306, "400373", "{\n}", "Blue Currents", "John Toki", "Richmond", "1994", "permanent", "interior", "Mural", "Stoneware and porcelain clay, pigments", [ "{\"address\":\"City Hall, 1 Frank H. Ogawa Plaza.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80518938519606", "-122.27228822004383", null, false ], "City Hall, 1 Frank H. Ogawa Plaza." ]
+, [ 29, "6E37E3E8-7684-4272-8C53-98AAB0BFD4C7", 29, 1357848295, "400373", 1357848305, "400373", "{\n}", "Firestorm Tile Mural", "Gail Smithwalter", null, "1994", "permanent", "exterior", "Mural", "Ceramic Tile ", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 30, "0E41728C-0E9C-4062-8028-199AC7B5F244", 30, 1357848295, "400373", 1357848303, "400373", "{\n}", "Swan's Market Building", "Jim Kushera", "Oakland", "1994", "temporary", "exterior", "Mural", "Various Materials", [ "{\"address\":\"9th Street and Washington\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80136726657156", "-122.27457249799824", null, false ], "9th Street and Washington" ]
+, [ 31, "E4D7ACA3-8951-4AF9-8089-608D3611F3F7", 31, 1357848295, "400373", 1357848307, "400373", "{\n}", "Asian Branch Library", "Reiko Goto", "San Francisco (?)", "1995", "permanent", "interior", "Architecturally integrated wall trim, tiles, suspended sculpture ", "Canvas, wood, stone tiles", [ "{\"address\":\"Asian Branch Library, 338 - 9th Street, Suite 190,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Asian Branch Library, 338 - 9th Street, Suite 190," ]
+, [ 32, "E391C973-3AFC-4B86-9338-FDEB6815CC2B", 32, 1357848295, "400373", 1357848306, "400373", "{\n}", "Holding Tomorrow’s Heart", "Amana Johnson", "Oakland", "1995", "permanent", "exterior", "Sculpture", null, [ "{\"address\":\"Knowland Park\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Knowland Park" ]
+, [ 33, "67A2CB42-B119-422D-9F59-C5C4EA331F0B", 33, 1357848295, "400373", 1357848305, "400373", "{\n}", "Fire Station 24 Public Art Project", "Robin Myers", "San Francisco", "1996", "permanent", "exterior", "Plaques", "Canvas, acrylic, bronze, cast colored, concrete, epoxy-based paint", [ "{\"address\":\"5900 Shepard Canyon Road,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.82370500896578", "-122.20388021935031", null, false ], "5900 Shepard Canyon Road," ]
+, [ 34, "52C21909-9051-4C7B-8295-84B8FB03A197", 34, 1357848295, "400373", 1357848304, "400373", "{\n}", "Laurel District Community Banner", "Caryl Henry", "Oakland", "1996", "long term temp", "exterior", "Banners", "Acrylic paint, Polyester Fabric, brass grommets", [ "{\"address\":\"35th and High street, Laurel District\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "35th and High street, Laurel District" ]
+, [ 35, "C837DC35-6B0C-43FE-9E1D-3EA11009AC0F", 35, 1357848295, "400373", 1357848306, "400373", "{\n}", "WOYDC ", "Arnold White", "Oakland", "1996", "permanent", "both", "Mixed Projects", "Various Materials", [ "{\"address\":\"Poplar Recreation Center\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Poplar Recreation Center" ]
+, [ 36, "C6C91D2C-39EC-445E-A9D6-260ED7B98D7E", 36, 1357848295, "400373", 1357848306, "400373", "{\n}", "The Pioneers", "James Gayles", "Oakland", "1996", "permanent", "both", "Mural (ceramic)", "Ceramic tile, concrete", [ "{\"address\":\"Bushrod Community Center,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Bushrod Community Center," ]
+, [ 37, "5990FA9D-8B13-45BE-A824-14EB5CF2026D", 37, 1357848295, "400373", 1357848305, "400373", "{\n}", "Fruitvale District Banner Project", "Kim Anno and Marsha Gale", "Oakland", "1997", "long term temp", "exterior", "Banners", "Polyester fabric, brass grommets", [ "{\"address\":\"East 14th Street between Fruitvale\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.79811632607474", "-122.25837284075023", null, false ], "East 14th Street between Fruitvale" ]
+, [ 38, "39CE82BC-2F7F-4B49-B916-5D0B6F8E1E8C", 38, 1357848295, "400373", 1357848304, "400373", "{\n}", "What Once Was", "Michael Brown and Chris Jacobson", "San Francisco and Los Gatos", "1997", "permanent", "exterior", "Median Strips & Sculpture", "COR-TEN steel, natie grasses, rush, two oak trees", [ "{\"address\":\"Scout Rd.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Scout Rd." ]
+, [ 39, "4C147698-A9B1-42E8-AE51-CAFFAE8DD496", 39, 1357848295, "400373", 1357848304, "400373", "{\n}", "Grand Avenue Banners Project", "Rose Kelly", "Oakland", "1997", "long term temp", "exterior", "Banners", "Banner", [ "{\"address\":\"Grand Ave from Grand Lake Theater to the Piedmont Border\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Grand Ave from Grand Lake Theater to the Piedmont Border" ]
+, [ 40, "2249B941-6FB4-4D5F-A46B-A66B6A08EAF4", 40, 1357848295, "400373", 1357848304, "400373", "{\n}", "Hong Fook Senior Center Zodiac Garden", "Sally Morey", "Oakland", "1997", "permanent", "exterior", "Scupture", "Planters two Sizes: Steel", [ "{\"address\":\"7th St and Harrison\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.798075747944324", "-122.27059749462876", null, false ], "7th St and Harrison" ]
+, [ 41, "45755BAC-62D7-4100-8F87-E98FB53A40D6", 41, 1357848295, "400373", 1357848304, "400373", "{\n}", "Communication Workers of America", "Daniel Camacho", "Oakland", "1997", "permanent", "exterior", "Mural", "Mural Paint", [ "{\"address\":\"1831 Park Boulevard\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.799363022420046", "-122.25074029857312", null, false ], "1831 Park Boulevard" ]
+, [ 42, "28368F98-3FA2-498D-873E-CC616539CD87", 42, 1357848295, "400373", 1357848304, "400373", "{\n}", "Dimond Mural", "Daniel Camacho", "Oakland", "1997", "permanent", "exterior", "Mural", "Mural Paint", [ "{\"address\":\"Fruitvale Ave\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.76881180911087", "-122.2303843100886", null, false ], "Fruitvale Ave" ]
+, [ 43, "34F771DE-A4AB-4DC5-8C44-FCB89A88FB83", 43, 1357848295, "400373", 1357848304, "400373", "{\n}", "911 Facility Courtyard", "Anna Valentina Murch", "San Francisco", "1998", "permanent", "exterior", "Landscaping Desing", "Concrete, Plants, landscaping Materials", [ "{\"address\":\"7101 Edgewater Drive\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.74878568640261", "-122.20943077397979", null, false ], "7101 Edgewater Drive" ]
+, [ 44, "6C2A8651-1468-41E3-89F6-D7E4297F427E", 44, 1357848295, "400373", 1357848305, "400373", "{\n}", "Spring of Wisdom", "Senri Nojima", "Oakland", "1998", "permanent", "exterior", "Sculpture", "Green granite, concrete", [ "{\"address\":\"5714 Martin Luther King Jr. Way.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.84227640592025", "-122.27005405424919", null, false ], "5714 Martin Luther King Jr. Way." ]
+, [ 45, "0379ACDE-002D-4DBA-A89F-4717312A8AE4", 45, 1357848295, "400373", 1357848303, "400373", "{\n}", "Rock On Oakland", "Donna Billick", "Davis", "1998", "permanent", "exterior", "Ground Mural", "Portland cement, sand, marble aggregate", [ "{\"address\":\"Frank H. Ogawa Plaza\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Frank H. Ogawa Plaza" ]
+, [ 46, "DD71C8E1-0115-446F-BC60-CFC2F4DE3F7B", 46, 1357848295, "400373", 1357848306, "400373", "{\n}", "Hear Our Voices", "Rene Yung", "San Francisco", "1998", "permanent", "exterior", "Scupture", "Colored Concrete, sand, Mosaic Tile", [ "{\"address\":\"Public Plaza at 27th and 28th\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Public Plaza at 27th and 28th" ]
+, [ 47, "75555DA8-7E51-4F59-AD67-1A67E809E6EF", 47, 1357848295, "400373", 1357848305, "400373", "{\n}", "Highland Park Terrace Street Island", "Woody Johnson", "Oakland", "1998", "permanent", "exterior", "Scupture", "Portland cement", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 48, "FE474584-DCA6-4A9B-8076-43B31C5AE99C", 48, 1357848295, "400373", 1357848307, "400373", "{\n}", "Encounter No. 2", "Steve Gillman", "Oakland", "1998", "permanent", "exterior", "Scupture", "Granite", [ "{\"address\":\"MacArthur and Lincoln\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.79983841912173", "-122.21406611186694", null, false ], "MacArthur and Lincoln" ]
+, [ 49, "15A59C55-CACC-479A-9503-288EF667BC85", 49, 1357848295, "400373", 1357848304, "400373", "{\n}", "East Lake/San Antonio District", "Taller Sin Fronteras", "Oakland", "1998", "permanent", "exterior", "Banners", "Canvas, Mural Paint, 30 Banners", [ "{\"address\":\"(14th St.) and 12th St.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.79889413099096", "-122.26055206756149", null, false ], "(14th St.) and 12th St." ]
+, [ 50, "A3650E7B-60C2-446D-B5EC-140144EB867A", 50, 1357848295, "400373", 1357848306, "400373", "{\n}", "Animal Shelter Public Art Project", "Michael Carey", "Berkeley ", "1998", "permanent", "exterior", "Sculpture", "Bronze", [ "{\"address\":\"29th Ave\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.771887490451064", "-122.236351311753", null, false ], "29th Ave" ]
+, [ 51, "C78A48CC-0B0E-4640-88D4-9B97594EDC7D", 51, 1357848295, "400373", 1357848306, "400373", "{\n}", "Bust of Frank H. Ogawa", "Cedric Wentworth", "San Francisco", "1998", "permanent", "exterior", "Sculpture", "Bronze and granite", [ "{\"address\":\"Frank H. Ogawa Plaza\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Frank H. Ogawa Plaza" ]
+, [ 52, "DCA4E511-AFC6-4835-82A7-FE9071A2F305", 52, 1357848295, "400373", 1357848306, "400373", "{\n}", "Oakland Emergency Operations Center", "David Ruth and Chuck Splady", "Oakland", "1999", "permanent", "exterior", "Mixed Media Pannels", "Glass panels, iron rails, steel door handles", [ "{\"address\":\"1605 Martin Luther King Jr. Way,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.807574693372736", "-122.27516734050114", null, false ], "1605 Martin Luther King Jr. Way," ]
+, [ 53, "F42599A2-709B-425E-A715-D1325460F217", 53, 1357848295, "400373", 1357848307, "400373", "{\n}", "Spiral Bench", "Scott Constable", "Oakland", "1999", "permanent", "exterior", "Sculpture - Bench", "Various Materials", [ "{\"address\":\"1006 Amito Drive\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.860470710337154", "-122.2343907897291", null, false ], "1006 Amito Drive" ]
+, [ 54, "4F3D9242-ED87-43D7-82A8-FAF3994E71EB", 54, 1357848295, "400373", 1357848304, "400373", "{\n}", "Sígame/Follow Me", "Scott Donahue", "Emeryville", "1999", "permanent", "exterior", "Sculpture", "Various Materials", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 55, "43EA44E5-753A-433F-893B-5E765A47D724", 55, 1357848295, "400373", 1357848304, "400373", "{\n}", "Regatta", "Robert W. Ellison", "Penngrove", "2000", "permanent", "exterior", "Sculpture", "Aluminum, enamel, stainless steel", [ "{\"address\":\"Estuary Park on Embarcadero East,\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Estuary Park on Embarcadero East," ]
+, [ 56, "A83122E1-CE35-415E-91E0-908F03FC4D8C", 56, 1357848295, "400373", 1357848306, "400373", "{\n}", "Vitality", "Bruce Beasley", "Oakland", "2001", "permanent", "exterior", "Sculpure", "Bronze, stainless steel", [ "{\"address\":\"Frank H. Ogawa Plaza\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Frank H. Ogawa Plaza" ]
+, [ 57, "5D5C6F24-69C6-42C0-9F13-D2376632ADA0", 57, 1357848295, "400373", 1357848305, "400373", "{\n}", "Coming and Going From Sun Up to Sun Down", "Diana Pumpelly Bates", "San Jose", "2002", "permanent", "exterior", "Murals", "Stainless steel, cement", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 58, "8E310EA2-DA2C-467D-B2E6-D6867E290087", 58, 1357848295, "400373", 1357848306, "400373", "{\n}", "Fire Station 8 (walkway), and Timeline/", "Jeff Norman", "Oakland", "2003", "permanent", "exterior", "Engraved Tiles", "Black granite, lithichrome paint, porcelain", [ "{\"address\":\"463 51st Street\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.83705756225446", "-122.261296040977", null, false ], "463 51st Street" ]
+, [ 59, "13443E80-3535-40B7-B2A3-E8740ACB9863", 59, 1357848295, "400373", 1357848303, "400373", "{\n}", "A Journey of Promise", "Daniel Galvez and Patricia A. Montgomery", "Oakland", "2003", "permanent", "interior", "Mural", "Canvas, ink, oil paint, varnish", [ "{\"address\":\"14th Street\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.79811632607474", "-122.25837284075023", null, false ], "14th Street" ]
+, [ 60, "8702C110-6BF1-4A8A-A9A3-3D4536228593", 60, 1357848295, "400373", 1357848305, "400373", "{\n}", "Bella Vista Gate", "Eric Powell", "Berkeley", "2005", "permanent", "exterior", "Architecturally integrated gate", "Forged and reclaimed steel", [ "{\"address\":\"11th Avenue\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.78988292425737", "-122.25088885235664", null, false ], "11th Avenue " ]
+, [ 61, "D309146B-8B43-4DBF-90D1-ECA7A302F608", 61, 1357848295, "400373", 1357848306, "400373", "{\n}", "Tall Grass Habitat", "Robin Murez", "Venice CA", "2005", "permanent", "exterior", "Sculptural environment", "Concrete, bronze", [ "{\"address\":\"Entrance to Valley Children's Zoo\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Entrance to Valley Children's Zoo" ]
+, [ 62, "2D9B04E7-F52C-4D3A-ABCF-C8E56BF7F44E", 62, 1357848295, "400373", 1357848304, "400373", "{\n}", "Fruitvale Pedestrian Plaza", "Vicki Jo Sowell", "Emeryville", "2005", "Permanent", "exterior", "*budget split btw two projects, from PWA", "metal archway sculptures", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 63, "0EED25EE-FADB-4D85-9314-0E96B75FE623", 63, 1357848295, "400373", 1357848303, "400373", "{\n}", "Fruitvale Pedestrian Plaza", "Daniel Camacho and Gonzalo Hidalgo ", "Oakland", "2005", "permanent", "exterior", "*budget from PWA", "series of cast-relief and mosaic artworks", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 64, "5AAD307F-84D9-4352-A939-1B9B01BFB940", 64, 1357848295, "400373", 1357848305, "400373", "{\n}", "Unknown Island", "Sonja Meller", "Oakland", "2005", "temporary", "exterior", "Sculpture", "Wooden boat, plants", [ "{\"address\":\"Lake Merritt, District 3\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Lake Merritt, District 3" ]
+, [ 65, "59A75063-D668-4585-97E9-AFE2603D83F2", 65, 1357848295, "400373", 1357848305, "400373", "{\n}", "Cartoneria Sculptures", "Ruben Guzman", "Oakland", "2005", "temporary", "interior", "Sculpture", "Cartoneria", [ "{\"address\":\"C&eacute;sar E. Ch&aacute;vez Branch Library, District 5 (debut)\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "César E. Chávez Branch Library, District 5 (debut)" ]
+, [ 66, "EBE5CC48-0AE1-4D8E-B81C-91860448F432", 66, 1357848295, "400373", 1357848307, "400373", "{\n}", "Waterworks", "Gregory Gavin", "Oakland", "2005", "temporary", "exterior", null, "interactive water sculpture", [ "{\"address\":\"Museum of Children's Art, Swan's Market Courtyard, District 3\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Museum of Children's Art, Swan's Market Courtyard, District 3" ]
+, [ 67, "7E401F8E-8B4D-42D2-B939-80E4D425671F", 67, 1357848295, "400373", 1357848305, "400373", "{\n}", "Peralta Elementary", "Lauren Elder", "Oakland", "2005", "permanent", "exterior", null, "murals and fence art treatments ", [ "{\"address\":\"Peralta Elementary, District 1\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Peralta Elementary, District 1" ]
+, [ 68, "3F877BDD-83D5-4667-BC11-44DA39EE31E7", 68, 1357848295, "400373", 1357848304, "400373", "{\n}", "55th St. Community Garden", "Gina Telcocci", "Oakland", "2005", "permanent", "exterior", "Sculpture", "functional stone sculptures", [ "{\"address\":\"55th Street Community Garden, District 1\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "55th Street Community Garden, District 1" ]
+, [ 69, "B3AC869A-E375-46EC-9022-3452CAA6B521", 69, 1357848295, "400373", 1357848306, "400373", "{\n}", "Waterfront Trail Markers", "Mildred Howard", "Berkeley", "2005", "permanent", "exterior", "Sculpture  ", "cut metal", [ "{\"address\":\"Aquatic Park\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Aquatic Park" ]
+, [ 70, "F530EC86-9F30-44E3-B5F5-D9BED87AA2D0", 70, 1357848295, "400373", 1357848307, "400373", "{\n}", "Coliseum Intercity Rail - Bart Station", "Horace Washington", "San Francisco?", "2005", "permanent", "exterior", "*confirm art budget", "metal sculptures", [ "{\"address\":\"Oakland Coliseum InterCity Rail Station\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Oakland Coliseum InterCity Rail Station" ]
+, [ 71, "A31FCFE2-026D-4156-9F82-32F5269B252F", 71, 1357848295, "400373", 1357848306, "400373", "{\n}", "Broadway Underpass", "Team of Five", "Oakland", "2005", "permanent", "exterior", "*confirm art budget", "metal rails, uplighting, paint on columns", [ "{\"address\":\"Broadway/I-880 Underpass\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Broadway/I-880 Underpass" ]
+, [ 72, "55A1E196-1AAD-45B1-9F5F-ED311721E946", 72, 1357848295, "400373", 1357848305, "400373", "{\n}", "Triptych Mural", "Anthony Holdsworth", "Oakland", "2006", "permanent", "interior", "Mural", null, [ "{\"address\":\"City Hall Plaza, 250 FOP\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "City Hall Plaza, 250 FOP" ]
+, [ 73, "CE2A56BC-2D24-4046-8417-00EF0D10E560", 73, 1357848295, "400373", 1357848306, "400373", "{\n}", "15 Seconds", "Steve Gillman & Katherine Keefer", "Oakland", "2006", "permanent", "exterior", "Sculptures, etched text, landscape design", null, [ "{\"address\":\"Mandela Parkway at 14th\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.81690755123785", "-122.2896136589383", null, false ], "Mandela Parkway at 14th" ]
+, [ 74, "1381CE21-D1D9-4C20-8240-0D0A08E6D173", 74, 1357848295, "400373", 1357848303, "400373", "{\n}", "Carmen Flores Recreation Center Public Art Project (El Corrazón)", "Joaquin Alejandro Newman and assistants", "Oakland", "2006", "permanent", "interior", "Mural", "Canvas and Acryllic Paint", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 75, "68C6C286-6493-4EF2-8AF3-D0CDE56980B4", 75, 1357848295, "400373", 1357848305, "400373", "{\n}", "Wave Oculus", "Ned Kahn", "Sebastopol", "2006", "permanent", "exterior", "Integrated sculpture", "Stainless steel and mirrors. ", [ "{\"address\":\"In the Oakland Estuary\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "In the Oakland Estuary " ]
+, [ 76, "5D17BDCC-0CCA-41F6-96DE-7EDC9DFC89E5", 76, 1357848295, "400373", 1357848305, "400373", "{\n}", "Woven Stories", "Laurel True", "Oakland", "2007", "permanent", "exterior", "integrated mosaics", "mosaic panel insets in park seat walls", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 77, "FE34B6A1-18FA-440A-9945-C7B882C96939", 77, 1357848295, "400373", 1357848307, "400373", "{\n}", "Fairy Music Farm", "Lynne-Rachel Altman (team)", "Oakland", "2008", "permanent", "exterior", "Mural, Terrazzo Plaza, Sculptures, Gates", "Mural, Terrazzo Plaza, Sculptures, Gates", [ "{\"address\":\"Children's Fairyland\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Children's Fairyland" ]
+, [ 78, "72A4F544-AD61-4B07-A4B6-B30DBCE50864", 78, 1357848295, "400373", 1357848305, "400373", "{\n}", "Lightsticks (Studio One Art Center)", "Cork Marcheschi", "San Francisco", "2008", "permanent", "exterior", "Sculptures", "site-specific standalone sculptures", [ "{\"address\":\"Studio One Art Center\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "Studio One Art Center" ]
+, [ 79, "C100FBC3-F49F-4FFA-80AB-8D58B88FB7A5", 79, 1357848295, "400373", 1357848306, "400373", "{\n}", "Fluid Dynamics (66th Avenue Gateway)", "Fernanda D’Agostino and Valerie Otani", "Portland, OR", "2008", "permanent", "exterior", "Sculpture and Viewing Shelter", "Stainless Steel, Granite ", [ "{\"address\":\"66th Ave Gateway Park\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "66th Ave Gateway Park " ]
+, [ 80, "110E9EB1-7C3C-486E-93A5-88D1B18381B0", 80, 1357848295, "400373", 1357848303, "400373", "{\n}", "Views of the Greenbelt", "Mark Brest van Kempen", "Oakland", "2008", "permanent", "exterior", "Sculptures", "site-specific standalone sculptures", [ "{\"address\":\"FROG Park\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "FROG Park" ]
+, [ 81, "DE256469-F1DC-4297-8448-F9B1969FDDC4", 81, 1357848295, "400373", 1357848306, "400373", "{\n}", "Ase (Ramondi Park)", "Eesuu Orundide ", "Oakland", "2008", "permanent", "exterior", "Sculpture", "Bronze, standalone sculpture", [ "{\"address\":\"18th between Wood and Campbell Streets.\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], " 18th between Wood and Campbell Streets." ]
+, [ 82, "38D31891-F638-4BD3-9CC2-7985EFE26B67", 82, 1357848295, "400373", 1357848304, "400373", "{\n}", "\"Unity,\" Mandela Gateway Sculptures", "Robert Ellison", "Penngrove", "2008", "permanent", "exterior", "Sculptures", "Aluminum", [ "{\"address\":\"7th St. &amp; Mandela Parkway\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], "7th St. & Mandela Parkway" ]
+, [ 83, "724C0AF3-81C2-41B0-BB96-16208394D07B", 83, 1357848295, "400373", 1357848305, "400373", "{\n}", "East Oakland Sports Center", "Daniel Galvez and Jos Sances", "Oakland/Berkeley", "2009", "permanent", "exterior / interior", "Murals Painted on Metal Sunscreens", "TBD", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 84, "2D68C68F-EDC4-430B-9F07-830AE293C10D", 84, 1357848295, "400373", 1357848304, "400373", "{\n}", "Our Oakland: Eastside Stories (East Oakland-81st Avenue Community Library)", "Rene Yung", "San Francisco", "2009", "permanent", "exterior & interior", "Glass and Digital Storyteller", "architecturally integrated glass and free-standing interactive web -pod computer station", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 85, "8D4EE88B-C3B6-44F0-8589-88CB921E0B88", 85, 1357848295, "400373", 1357848306, "400373", "{\n}", "Generations (Fire Station 18)", "Laurel True", "Oakland", "2009", "permanent", "exterior & interior", "Mosaic Panels", "mosaic panels applied to exterior façade and community room", [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 86, "A7D0C51A-B7BF-478E-A2A7-EF8A4FA5B636", 86, 1357848295, "400373", 1357848306, "400373", "{\n}", "Lake Merritt to Oakland Estuary Channel", "John Roloff and Lewis deSoto", "Napa and Oakland", "2010", "permanent", "exterior", "LED Media Work", null, [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 87, "EC3E52D5-8819-4194-B0C0-857801BF8A25", 87, 1357848295, "400373", 1357848307, "400373", "{\n}", "Lake Merritt 12th Street", "John Colle Rogers and Todd Blair (team)", "Oakland", "2010", "permanent", "exterior", "Sculptures, LEDs", null, [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 88, "D65EDEBC-B030-4A52-A2FA-AF3E2F6E9D23", 88, 1357848295, "400373", 1357848306, "400373", "{\n}", null, "David Stern Gottfried- City Canvas", "Oakland", null, "long term temp", null, null, null, [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 89, "CF6CA85C-823F-4C36-B1CC-ABAD8705DC8C", 89, 1357848295, "400373", 1357848306, "400373", "{\n}", "10,000 Steps", "Marksearch (Sue Mark and Bruce Douglas)", "Oakland", null, "long term temp", null, null, null, [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+, [ 90, "628CC292-C69A-43F3-B374-AC774DEA606F", 90, 1357848295, "400373", 1357848305, "400373", "{\n}", "Once Upon a Time Happily Every After", null, null, null, "long term temp", null, null, null, [ "{\"address\":\"\",\"city\":\"Oakland\",\"state\":\"CA\",\"zip\":\"\"}", "37.80505999961946", "-122.27301999967312", null, false ], null ]
+ ]
+}
