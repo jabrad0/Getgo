@@ -33,7 +33,7 @@
                   
           var attributes = data[title];
           //console.log(attributes.address[0]);
-          //console.log(attributes.url);
+          console.log(attributes.url);
           //var url = attributes.url;
           //console.log(attributes.url.constructor);
           var marker_businesses = new google.maps.Marker({
@@ -47,15 +47,15 @@
           // Create marker info window'''
           var infowindow = new google.maps.InfoWindow();
           //maxWidth: 200
-          google.maps.event.addListener(marker_businesses, 'mouseover', function() {
-            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + attributes.url + '</div>');
+          google.maps.event.addListener(marker_businesses, 'click', function() {
+            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="attributes.url">Yelp Link</a>' + 
+              '</div>');   
 
             //infowindow.setContent(this.info);  could also do this
             infowindow.open(map, marker_businesses);
           });
-          google.maps.event.addListener(marker_businesses, 'mouseout', function() { 
-            infowindow.close();
-          });
+          //google.maps.event.addListener(marker_businesses, 'mouseout', function() { 
+            //infowindow.close();  });
         })
           
         });
