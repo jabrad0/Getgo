@@ -20,6 +20,10 @@
         
         //Now Send the user input geocoded address (lat lng) to webapp.py
         //parses the json for you instead of leaving it as a string.
+       
+
+
+
         $.getJSON("/get_nearby_businesses", {lat: lat, lng: lng}).done(function(data){ //this invokes ajax call?
         console.log(data); //console.logs a json object
 
@@ -33,7 +37,7 @@
                   
           var attributes = data[title];
           //console.log(attributes.address[0]);
-          console.log(attributes.url);
+          //console.log(attributes.url);
           //var url = attributes.url;
           //console.log(attributes.url.constructor);
           var marker_businesses = new google.maps.Marker({
@@ -48,8 +52,7 @@
           var infowindow = new google.maps.InfoWindow();
           //maxWidth: 200
           google.maps.event.addListener(marker_businesses, 'click', function() {
-            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="attributes.url">Yelp Link</a>' + 
-              '</div>');   
+            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a></div>');  
 
             //infowindow.setContent(this.info);  could also do this
             infowindow.open(map, marker_businesses);
@@ -59,9 +62,71 @@
         })
           
         });
+      
+
+
+
+////////////////////
+
+        $.getJSON("/get_public_art", {lat: lat, lng: lng}).done(function(data){ 
+        console.log(data); 
+
+       
+        Object.keys(data).forEach (function(title) {
+          var attributes = data[title];
+          console.log(attributes.url);
+          var marker_public_art = new google.maps.Marker({
+            map: map,
+            animation: google.maps.Animation.DROP,
+            position: new google.maps.LatLng(attributes.latitude, attributes.longitude),
+            icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+          });
+          
+          var infowindow_public_art = new google.maps.InfoWindow();
+          google.maps.event.addListener(marker_public_art, 'click', function() {
+            infowindow_public_art.setContent('<h3>' + title + '</h3><div>' + '<br />' + attributes.address + '<br />' + attributes.exterior + '<br />' + attributes.media_type + '<br /></div>');  
+          infowindow_public_art.open(map, marker_public_art);
+          });
+         })
+          
+        });
+
+////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       } 
       else console.log(status);
     }
+ 
+
+
+
+
+
+
+
+
+
+
   // Initializes map of Oakland centered on lat, long listed'''
     var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
     var mapOptions = {
@@ -99,9 +164,3 @@
 // The above code was written with (some help from Jeff and Jen) using: https://developers.google.com/maps/documentation/javascript/reference#Geocoder 
 
 google.maps.event.addDomListener(window, 'load', window.bike.initialize);
-
-
-
-
-
-

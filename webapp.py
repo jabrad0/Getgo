@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify 
 import pdb #python debugger
 #pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
+import pprint
 import json
 import combine_galleries_wineries as yelp
-import pprint
+import Parse_Oakland_Public_Art_json as public_art
 
 
 app = Flask (__name__)
@@ -20,9 +21,9 @@ def home_page():
 @app.route('/get_nearby_businesses', methods=["GET"])
 def get_nearby_points():
     latitude = float(request.args.get("lat"))
-    print latitude 
+    #print latitude 
     longitude = float(request.args.get("lng"))
-    print longitude
+    #print longitude
     #points = jsonify(latitude=lat, longitude=lng)  
     yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
     yelp_call_results_json = json.dumps(yelp_call_results)
@@ -31,10 +32,10 @@ def get_nearby_points():
     
     #return render_template("test.html", lat = latitude, lng = longitude) #orange = html
 
-#access yelp_api_galleries
-#insert lat lng params into function
-  
-   
+@app.route('/get_public_art', methods=["GET"])
+def get_public_art():
+    return public_art.public_art_data()
+
 @app.route('/js/mapping.js')
 def mapping_js():
     return app.send_static_file('js/mapping.js')
