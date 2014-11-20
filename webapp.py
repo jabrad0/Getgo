@@ -26,6 +26,7 @@ def get_nearby_points():
     #points = jsonify(latitude=lat, longitude=lng)  
     yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
     yelp_call_results_json = json.dumps(yelp_call_results)
+    #print type(yelp_call_results_json) #--> string 
     return yelp_call_results_json
     
     #return render_template("test.html", lat = latitude, lng = longitude) #orange = html
