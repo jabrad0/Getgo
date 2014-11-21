@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify 
+from flask import Flask, session, render_template, request, jsonify 
 import pdb #python debugger
 #pdb.set_trace()  #python debugger - pauses at this line.  type lat and it will show you, continue leave pause
 import pprint
@@ -8,9 +8,12 @@ import Parse_Oakland_Public_Art_json as public_art
 
 
 app = Flask (__name__)
+app.secret_key = 'test'
 #pdb.set_trace
 @app.route('/', methods=["GET"])
 def home_page():
+    session["key"] = "value"
+    print session.get("key")
     address = request.args.get("address")
     if not address:   
         address = "1807 Telegraph Avenue"
@@ -29,7 +32,6 @@ def get_nearby_points():
     yelp_call_results_json = json.dumps(yelp_call_results)
     #print type(yelp_call_results_json) #--> string 
     return yelp_call_results_json
-    
     #return render_template("test.html", lat = latitude, lng = longitude) #orange = html
 
 @app.route('/get_public_art', methods=["GET"])

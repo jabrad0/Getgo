@@ -2,3 +2,5 @@ yelp_api_key.*
 Google_API_key.*
 *.pyc
 env/
+notes/
+other_data/
