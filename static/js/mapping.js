@@ -1,3 +1,47 @@
+$( document ).ready(function() {
+
+///////////////////////////
+////// Initializes map of Oakland centered on lat, long listed'''
+    var mapOptions = {
+      zoom: 14,
+      center: myLatlng
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+    var bikeLayer = new google.maps.BicyclingLayer();
+      bikeLayer.setMap(map);
+})
+
+var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
+var array_locations = [];
+
+function myFunction(lat, _long){
+    array_locations.push([lat, _long]);
+
+    console.log(array_locations);
+
+    get_directions([37.80125934792801, -122.26349285059729], [37.80136726657156, -122.27457249799824]);
+} 
+
+function get_directions (pos1, pos2){
+  var directions_service = new google.maps.DirectionsService();
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+      directionsDisplay.setMap(map);
+
+  var directionsRequest = {
+    origin: new google.maps.LatLng(pos1[0], pos1[1]),
+    destination: new google.maps.LatLng(pos2[0], pos2[1]),
+    travelMode: google.maps.TravelMode.BICYCLING,
+
+  };
+  directions_service.route(directionsRequest, function(result, status){
+
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(result);
+    }
+  });
+};
+
 
 (function (bike) {
 //debugger  //alert(data);
@@ -5,6 +49,7 @@
 
 
     function dropMarkerAndGetNearbyPoints (results, status){ //results = geocoderRequest (lat / long via user)
+
       console.log(status);
       if (status === google.maps.GeocoderStatus.OK && results.length > 0){
         var result = results[0];
@@ -53,36 +98,35 @@
           var infowindow = new google.maps.InfoWindow();
           //maxWidth: 200
           google.maps.event.addListener(marker_businesses, 'click', function() {
-            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a>' + '<button onclick="myFunction()">Directions</button></div>');
+            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a>' + '<button onclick="myFunction(' + attributes.latitude + ', ' + attributes.longitude
+              + ')">Directions</button></div>');
+
+            // $("body").append($("<h3>").attr("id", "title").val(title));
+            // $("body").append($("<button>").click(function(){alert("heya!");}));
+              // $("button")
+
 
             //alert("clicked " + attributes.latitude);
             //infowindow.setContent(this.info);  could also do this
             infowindow.open(map, marker_businesses);
-         
-
 
           });
           
-          function myFunction(){
-            console.log("Directions Clicked!");
-          } 
-
-          var array_destinations = [];
-          google.maps.event.addListener(marker_businesses, 'dblclick', function() {
+          // google.maps.event.addListener(marker_businesses, 'dblclick', function() {
               
-            array_destinations.push(attributes.latitude);
-            for (var i = 0; i < array_destinations.length; i++) {
-              console.log(array_destinations);            
-            }    
+          //   array_destinations.push(attributes.latitude);
+          //   for (var i = 0; i < array_destinations.length; i++) {
+          //     console.log(array_destinations);            
+          //   }    
 
             // var object_destinations = {};
             // object_destinations[attributes.latitude] = attributes.longitude;
             // console.log(object_destinations);
             //infowindow.close(map, marker_businesses);
-          });
+          // });
           //google.maps.event.addListener(marker_businesses, 'mouseout', function() { 
           //  infowindow.close();  });
-        })
+        });
         });
        ////////////////////
         $.getJSON("/get_public_art", {lat: lat, lng: lng}).done(function(data){ 
@@ -99,7 +143,8 @@
           
           var infowindow_public_art = new google.maps.InfoWindow();
           google.maps.event.addListener(marker_public_art, 'click', function() {
-            infowindow_public_art.setContent('<h3>' + title + '</h3><div>' + '<br />' + attributes.address + '<br />' + attributes.exterior + '<br />' + attributes.media_type + '<button onclick="myFunction()">Directions</button></div>');  
+            infowindow_public_art.setContent('<h3>' + title + '</h3><div>' + '<br />' + attributes.address + '<br />' + attributes.exterior + '<br />' + attributes.media_type + '<button onclick="myFunction(' + attributes.latitude + ', ' + attributes.longitude
+              +')">Directions</button></div>');  
           infowindow_public_art.open(map, marker_public_art);
           });
 
@@ -112,20 +157,7 @@
       else console.log(status);
     }
 ///////////////////////
-  
 
-
-///////////////////////////
-////// Initializes map of Oakland centered on lat, long listed'''
-    var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
-    var mapOptions = {
-      zoom: 14,
-      center: myLatlng
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-    var bikeLayer = new google.maps.BicyclingLayer();
-      bikeLayer.setMap(map);
    // All above code and the last line: google.maps.event.addDomListener(window, 'load', initialize);  --> comes from: https://developers.google.com/maps/documentation/javascript/examples/map-simple
 
   //////// Creates a new geocoder class'''
@@ -134,7 +166,6 @@
       address: bike.address,
       bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() - 1, myLatlng.lng() -1), new google.maps.LatLng(myLatlng.lat() + 1, myLatlng.lng() + 1))
     };
-    
   geocoder.geocode(geocoderRequest, dropMarkerAndGetNearbyPoints);
   }
 })
