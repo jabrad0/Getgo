@@ -19,7 +19,7 @@ def get_search_parameters(latitude, longitude):
     params = {}
     params["term"] = "wineries"
     params["ll"] = "{},{}".format(str(latitude),str(longitude))
-    params["radius_filter"] = "1000"
+    params["radius_filter"] = "2000"
     params["limit"] = "20"
     #params["rating"] = "5.0"
     return params
