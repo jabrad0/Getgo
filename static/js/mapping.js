@@ -12,10 +12,13 @@ var bikeLayer = new google.maps.BicyclingLayer();
 
 var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 var array_locations = [];
+
+var infowindows = {};
 /////////////////////////////////////
-function myFunction(lat1, _long1, lat2, _long2){
+function myFunction(title, lat1, _long1, lat2, _long2){
   //CREATE an ARRIVED BUTTON HERE, but should be in INFO window inside dropmarker...
-    $("body").prepend($("<button>").click(function(){alert("heya!");}));
+    
+    $(infowindows[title]).find('div.place').append($("<button>").click(function(){alert("heya!");}));
     
     array_locations.push([lat1, _long1], [lat2, _long2]);
     console.log(array_locations);
@@ -95,10 +98,25 @@ function get_directions (pos1, pos2){
           });
           // Create marker info window'''
           var infowindow = new google.maps.InfoWindow();
+          
+          infowindows[title] = infowindow;
+
           //maxWidth: 200
           google.maps.event.addListener(marker_businesses, 'click', function() {
-            infowindow.setContent('<h3>' + title + '</h3><div>'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a>' + '<button onclick="myFunction(' + lat_starting + ', ' + lng_starting + ',' + attributes.latitude + ', ' + attributes.longitude
-              + ')">Directions</button></div>');
+            
+            var infowindow_content = '<h3>' + title + '</h3><div class="place">'+ attributes.address[0] + '<br />' + attributes.categories[0][0] + '<br />' + '<a href="' + attributes.url + '">Yelp Link</a>' + '<button onclick="myFunction(\'' + title + '\', ' +lat_starting + ', ' + lng_starting + ',' + attributes.latitude + ', ' + attributes.longitude
+              + ')">Directions</button></div>';
+
+// // passing a DOM element instead of a string to infowindow.setContent
+//           var html = 
+//             '<h3>' + title + '</h3><button>Directions</button>';
+
+//           $(html).find('button').click(function () {
+//             myFunction(infowindow, lat1, long1, lat2, long2)
+//           });
+
+            console.log(infowindow_content);
+            infowindow.setContent(infowindow_content);
 
             // $("body").append($("<h3>").attr("id", "title").val(title));
             // $("body").append($("<button>").click(function(){alert("heya!");}));
