@@ -4,8 +4,28 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Bike - Art and Wine</title>
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-     <style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+    <script> 
+     // global variable for app
+      window.bike = {
+        address: "{{ address }}"
+      };
+    </script>
+    <script>
+      
+      $('#button-overlay').click(function(){
+        console.log("Hi");
+        $('#places_visited').append(miles_between + '<br>')   
+      });
+    
+    </script>
+    <script src="/js/mapping.js"></script> 
+  
+
+    <style>
       html, body, #map-canvas {  /* # is css code referencing an ID
       all CSS style parameters go in the style tags */
         height: 100%;
@@ -17,37 +37,51 @@
         background-color: #00cc00;  /* green */
         color: black;
       }
-      /* #address {
-        background-color: red;} */
-     
+      {% if address %}
+      #address-form {
+        display: none;  /* block, inline */
+      }
+      {% else %}
+      #show-address-form {
+        display: none;
+      }
+      {% endif %}
+
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
-    <script> 
-
-     // global variable for app
-      window.bike = {
-        address: "{{ address }}"
-      };
-    </script>
-    <script src="/js/mapping.js"></script> 
-
   </head>
   
+  
   <body>
-    
+    <button id="show-address-form">Show</button>
 
-    <form action="/" method="GET">Enter your starting point address:<br>
-        <input type="text" name="address" id="address"> 
-        <button type="submit">Go!</button>
-    </form>
-       <!--  <form action="/" method="POST">How far do you want to bike?<br>
-        <input type="text" name="miles" id="miles"> 
-        <button type="submit" >Go!</button> -->
-    </form>
+    <div id="address-form">
+        <button>&times;</button>
+        <div id="title">
+            <h1>Getgo</h1>
+            <h2>Get your art on the go!</h2>
+        </div>    
+        
+        <div class="form"><form action="/" method="GET"><h4>Enter your starting point address:</h4><br>
+          <input type="text" name="address" id="address"> 
+          <button id="go-button" type="submit">Go!</button>
+      </form></div>
+    </div>
+  
+      <div id="button-overlay"><a href='#'>See Your Stroll!</a></div> 
     
+      
     <div id="map-canvas"></div>
-  </body>
+  
+    <div class="overlay hidden" id="modal_places_visited">
+      <div id="places_visited">
+      <h4>Your Trip</h4>
+    
+    </div>
+    
+    </div> 
 
+
+  </body>
 </html>
 
 

@@ -15,8 +15,8 @@ def home_page():
     #session["key"] = "value"
     #print session.get("key")
     address = request.args.get("address")
-    if not address:   
-        address = "1807 Telegraph Avenue"
+    # if not address:   
+    #     address = "1807 Telegraph Avenue"
         #pdb.set_trace()
     print "THIS IS THE ADDRESS! WOOHOO!", address
     return render_template("index.html", address=address)
