@@ -1,21 +1,12 @@
 
-function places_to_go (){
+var modal_places_visited = [];
 
-  var places_to_go = [];
-  places_to_go = [ {name:'Joels Cafe', dist: 0.4},
-//                    { ... }
-// ]
-
-// $("#list").empty()
-// var total_dist = 0;
-// for (i=0; i<=places_to_go.length; i++) {
-  // $("#").append(places_to_go[i]['name'] + 
-  // total_d += pareFlaot()
-// }
-// $("#").append(...)
-
+function log_places_visited (title, num_miles_between ){
+  modal_places_visited.push({title: title, dist: num_miles_between});
+  //console.log(modal_places_visited[0].title);
+  //console.log(modal_places_visited[0].dist);
 }
-
+//'<span> "'+ sjashs +'"</span>' +
 
 
 ////// From Google - Initializes map of Oakland centered on lat, long listed'''
@@ -27,9 +18,24 @@ $(document).ready(function(){
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
+    
+  $('#button-overlay').click(function(e){
+    e.preventDefault();
+    console.log("Hi");
+    console.log(modal_places_visited);
+    var total_dist = 0;
+    for (i=0; i<modal_places_visited.length; i++) {   
+      //total_dist = modal_places_visited[i].dist;
+      console.log("here?")
+      $("#places_visited").append(modal_places_visited[i].title + "\t" + modal_places_visited[i].dist + '<br>')
+    };
+  //$("#places_visited").append(total_dist)      
+  })
+
   $('#button-overlay').click(function(e){
     e.preventDefault();
     $('#modal_places_visited').removeClass('hidden').click(function(){
+      $("#places_visited").empty()
       $(this).addClass('hidden') //addClass is jquery method must be called on jquery object so $() converts 'this' to a jquery object 
     });
 
@@ -48,7 +54,6 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
     var array_places = [];
     var miles_between = [];
     var miles_total = 0;
-
     
 
     var handleBusinessResults = function(data, lat_starting, lng_starting){
@@ -89,8 +94,8 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           infowindow.setContent(content.html()); 
           infowindow.open(map, marker_businesses);
           $('.info-window-direction-button').click(function() {
-            renderDirections([lat_starting, lng_starting], [attributes.latitude, attributes.longitude])
-            $('#places_visited').append(title +'<br>');
+            renderDirections(title, [lat_starting, lng_starting], [attributes.latitude, attributes.longitude])
+            //$('#places_visited').append(title +'<br>');
           });
         }); 
         markers.push(marker_businesses);
@@ -135,16 +140,16 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 
           infowindow.open(map, marker_public_art);
           $('.info-window-direction-button').click(function() {
-            renderDirections([lat_starting, lng_starting], [attributes.latitude, attributes.longitude])
+            renderDirections(title, [lat_starting, lng_starting], [attributes.latitude, attributes.longitude])
             array_places.push(title);
-            $('#places_visited').append(title);
+            //$('#places_visited').append(title);
           });
         });
         markers.push(marker_public_art);
       });
     };
 
-    function renderDirections (pos1, pos2){
+    function renderDirections (title, pos1, pos2){
       var directions_service = new google.maps.DirectionsService();
       var directionsDisplay = new google.maps.DirectionsRenderer();
           directionsDisplay.setMap(map);
@@ -160,11 +165,12 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           directionsDisplay.setDirections(result);
 
           miles_between = (result.routes[0].legs[0].distance.text);
-          console.log(miles_between);
+          //console.log(miles_between);
           num_miles_between = parseFloat(miles_between, 10);
-          miles_total += num_miles_between;
-          miles_total_rounded = miles_total.toFixed(2);
-          $('#places_visited').append(miles_between + '<br>') 
+          //miles_total += num_miles_between;
+          num_miles_between_rounded = num_miles_between.toFixed(1);
+          log_places_visited(title, num_miles_between_rounded)
+          //$('#places_visited').append(miles_between + '<br>') 
         }
       });
       getNearbyPoints(pos2[0], pos2[1]);

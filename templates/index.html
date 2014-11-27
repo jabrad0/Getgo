@@ -14,14 +14,9 @@
         address: "{{ address }}"
       };
     </script>
-    <script>
-      
-      $('#button-overlay').click(function(){
-        console.log("Hi");
-        $('#places_visited').append(miles_between + '<br>')   
-      });
     
-    </script>
+    
+
     <script src="/js/mapping.js"></script> 
   
 
@@ -37,6 +32,7 @@
         background-color: #00cc00;  /* green */
         color: black;
       }
+
       {% if address %}
       #address-form {
         display: none;  /* block, inline */
@@ -52,8 +48,9 @@
   
   
   <body>
-    <button id="show-address-form">Show</button>
+    
 
+    <button id="show-address-btn">Start Over!</button>
     <div id="address-form">
         <button>&times;</button>
         <div id="title">
@@ -64,10 +61,11 @@
         <div class="form"><form action="/" method="GET"><h4>Enter your starting point address:</h4><br>
           <input type="text" name="address" id="address"> 
           <button id="go-button" type="submit">Go!</button>
-      </form></div>
+          </form>
+        </div>
     </div>
   
-      <div id="button-overlay"><a href='#'>See Your Stroll!</a></div> 
+    <div id="button-overlay"><a href='#'>See Your Stroll!</a></div> 
     
       
     <div id="map-canvas"></div>
@@ -75,11 +73,15 @@
     <div class="overlay hidden" id="modal_places_visited">
       <div id="places_visited">
       <h4>Your Trip</h4>
-    
-    </div>
-    
+      </div>
     </div> 
 
+
+<script>$('#show-address-btn').click(function(){
+      console.log('hi');
+      window.location.replace('/');
+    })
+    </script>
 
   </body>
 </html>
