@@ -3,36 +3,28 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Bike - Art and Wine</title>
+    <title>Getgo-Get your art on the go!</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
-
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+    <script src="/js/mapping.js"></script> 
     <script> 
      // global variable for app
       window.bike = {
         address: "{{ address }}"
       };
+      $(document).ready(function(){
+              $('#close-btn').click(function(){
+                $('#address-form').addClass('hidden')
+              })
+            
+              
+              $('#start-over-btn').click(function(){
+                window.location.replace('/');
+              })
+            })
     </script>
-    
-    
-
-    <script src="/js/mapping.js"></script> 
-  
-
     <style>
-      html, body, #map-canvas {  /* # is css code referencing an ID
-      all CSS style parameters go in the style tags */
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-      button:hover {
-        cursor: pointer;
-        background-color: #00cc00;  /* green */
-        color: black;
-      }
-
       {% if address %}
       #address-form {
         display: none;  /* block, inline */
@@ -42,48 +34,36 @@
         display: none;
       }
       {% endif %}
-
     </style>
   </head>
   
-  
   <body>
-    
-
-    <button id="show-address-btn">Start Over!</button>
+    <button id="start-over-btn">Start Over!</button>
+    <div id="legend">
+        <h3>Legend</h3>
+        <div><img src="{{ url_for('static', filename = 'css/images/icons/red-dot.png')}}" alt="current location" style="width:30px">Current Location</div>
+        <div><img src="{{ url_for('static', filename = 'css/images/icons/purple-dot.png')}}" alt="winery" style="width:30px">Wine</div>
+        <div><img src="{{ url_for('static', filename = 'css/images/icons/green-dot.png')}}" alt="art gallery" style="width:30px">Art Gallery</div>
+        <div><img src="{{ url_for('static', filename = 'css/images/icons/yellow-dot.png')}}" alt="public art" style="width:30px">Public Art</div>
+    </div> 
     <div id="address-form">
-        <button>&times;</button>
+        <div id="close-btn"><button>&times;</button></div>
         <div id="title">
             <h1>Getgo</h1>
             <h2>Get your art on the go!</h2>
         </div>    
-        
         <div class="form"><form action="/" method="GET"><h4>Enter your starting point address:</h4><br>
           <input type="text" name="address" id="address"> 
           <button id="go-button" type="submit">Go!</button>
           </form>
         </div>
     </div>
-  
-    <div id="button-overlay"><a href='#'>See Your Stroll!</a></div> 
-    
-      
+    <div id="button-overlay"><a href='#'>View Your Stroll!</a></div> 
     <div id="map-canvas"></div>
-  
     <div class="overlay hidden" id="modal_places_visited">
-      <div id="places_visited">
-      <h4>Your Trip</h4>
-      </div>
+        <div id="places_visited">
+            <h4>Your Trip</h4>
+        </div>
     </div> 
-
-
-<script>$('#show-address-btn').click(function(){
-      console.log('hi');
-      window.location.replace('/');
-    })
-    </script>
-
   </body>
 </html>
-
-

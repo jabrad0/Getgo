@@ -1,10 +1,9 @@
-
 var modal_places_visited = [];
 
 function log_places_visited (title, num_miles_between ){
   modal_places_visited.push({title: title, dist: num_miles_between});
   //console.log(modal_places_visited[0].title);
-  //console.log(modal_places_visited[0].dist);
+  //console.log(typeof(modal_places_visited[0].dist));
 }
 //'<span> "'+ sjashs +'"</span>' +
 
@@ -16,20 +15,24 @@ $(document).ready(function(){
     center: myLatlng
     };
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  
+  
   var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
-    
+  
+  
+
   $('#button-overlay').click(function(e){
+    var total_dist_trip = 0;
     e.preventDefault();
-    console.log("Hi");
-    console.log(modal_places_visited);
-    var total_dist = 0;
     for (i=0; i<modal_places_visited.length; i++) {   
       //total_dist = modal_places_visited[i].dist;
-      console.log("here?")
-      $("#places_visited").append(modal_places_visited[i].title + "\t" + modal_places_visited[i].dist + '<br>')
+      $("#places_visited").append(modal_places_visited[i].title + "\t \t" + modal_places_visited[i].dist + '<br>')
+      distance = parseFloat(modal_places_visited[i].dist, 10);
+      total_dist_trip += distance;
     };
-  //$("#places_visited").append(total_dist)      
+    total_dist_trip_rounded = total_dist_trip.toFixed(1)
+    $("#places_visited").append('You have biked:  ' + total_dist_trip + ' miles')
   })
 
   $('#button-overlay').click(function(e){
@@ -53,9 +56,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
     var markers = [];
     var array_places = [];
     var miles_between = [];
-    var miles_total = 0;
     
-
     var handleBusinessResults = function(data, lat_starting, lng_starting){
       Object.keys(data)
       .forEach(function(title) {
@@ -165,12 +166,9 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           directionsDisplay.setDirections(result);
 
           miles_between = (result.routes[0].legs[0].distance.text);
-          //console.log(miles_between);
           num_miles_between = parseFloat(miles_between, 10);
-          //miles_total += num_miles_between;
           num_miles_between_rounded = num_miles_between.toFixed(1);
           log_places_visited(title, num_miles_between_rounded)
-          //$('#places_visited').append(miles_between + '<br>') 
         }
       });
       getNearbyPoints(pos2[0], pos2[1]);
