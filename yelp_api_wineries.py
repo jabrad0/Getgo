@@ -53,10 +53,10 @@ def main(latitude, longitude):
     for latitude, longitude in locations:
         params = get_search_parameters(latitude, longitude)
         api_calls_wineries.append(get_results(params))
-        #Be a good internet citizen and rate-limit yourself
-    #print api_calls_wineries
+    #print api_calls_wineries[0].get
     return api_calls_wineries
-    #time.sleep(1.0)
+
+#main(37.8, -122.3)    
 
 
 

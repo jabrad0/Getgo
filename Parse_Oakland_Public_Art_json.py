@@ -21,6 +21,7 @@ def public_art_data():
     json_data=open('Oakland_Public_Art_raw.json')
     data_python = json.load(json_data)
     data =  data_python.get("data")
+    #print data[0][8]
 
     #i = 0
     #for art in data:
@@ -66,3 +67,4 @@ def public_art_data():
     json_data.close()
     return public_art_dictionary_json 
 
+#public_art_data()

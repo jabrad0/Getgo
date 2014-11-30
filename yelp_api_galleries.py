@@ -62,11 +62,11 @@ def main(latitude, longitude):
             api_calls_galleries.append(get_results(params))
             #print api_calls_galleries[-1]['businesses']#[1]['name']
            
-    #print api_calls_galleries[1]['businesses'][0]['name']
+    #print api_calls_galleries#[1]['businesses'][0]['name']
     return api_calls_galleries
-    #time.sleep(1.0)
+    
 
-
+#main(37.8, -122.3)
 
 #import pprint
 #pp = pprint.PrettyPrinter(indent=2)

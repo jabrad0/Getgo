@@ -7,23 +7,24 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
-    <script src="/js/mapping.js"></script> 
+    
     <script> 
      // global variable for app
       window.bike = {
         address: "{{ address }}"
       };
-      $(document).ready(function(){
+      </script>
+      <script>$(document).ready(function(){
               $('#close-btn').click(function(){
                 $('#address-form').addClass('hidden')
               })
-            
-              
+
               $('#start-over-btn').click(function(){
                 window.location.replace('/');
               })
             })
     </script>
+    <script src="/js/mapping.js"></script> 
     <style>
       {% if address %}
       #address-form {

@@ -18,15 +18,13 @@ def home_page():
     # if not address:   
     #     address = "1807 Telegraph Avenue"
         #pdb.set_trace()
-    print "THIS IS THE ADDRESS! WOOHOO!", address
+    print "THIS IS THE ADDRESS: ", address
     return render_template("index.html", address=address)
 
 @app.route('/get_nearby_businesses', methods=["GET"])
 def get_nearby_points():
     latitude = float(request.args.get("lat"))
-    #print latitude 
     longitude = float(request.args.get("lng"))
-    #print longitude
     #points = jsonify(latitude=lat, longitude=lng)  
     yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
     yelp_call_results_json = json.dumps(yelp_call_results)

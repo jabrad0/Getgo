@@ -5,8 +5,6 @@ function log_places_visited (title, num_miles_between ){
   //console.log(modal_places_visited[0].title);
   //console.log(typeof(modal_places_visited[0].dist));
 }
-//'<span> "'+ sjashs +'"</span>' +
-
 
 ////// From Google - Initializes map of Oakland centered on lat, long listed'''
 $(document).ready(function(){
@@ -19,8 +17,6 @@ $(document).ready(function(){
   
   var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
-  
-  
 
   $('#button-overlay').click(function(e){
     var total_dist_trip = 0;
@@ -41,7 +37,6 @@ $(document).ready(function(){
       $("#places_visited").empty()
       $(this).addClass('hidden') //addClass is jquery method must be called on jquery object so $() converts 'this' to a jquery object 
     });
-
   });
 });
 
@@ -51,7 +46,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 //debugger  //alert(data);
   bike.initialize = function initialize(){  // green in HTML = tag specific parameters
     var infowindow = new google.maps.InfoWindow({
-      //maxWidth: 50000
+      maxWidth: 1000
     });
     var markers = [];
     var array_places = [];
@@ -164,6 +159,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       directions_service.route(directionsRequest, function(result, status){
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(result);
+          
 
           miles_between = (result.routes[0].legs[0].distance.text);
           num_miles_between = parseFloat(miles_between, 10);
