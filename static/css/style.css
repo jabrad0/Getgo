@@ -98,7 +98,8 @@ h4 {
 }
 
 .overlay div {
-    width:300px;
+    overflow: auto;
+    width:400px;
     margin: 100px auto;
     background-color: #fff;
     border:1px solid #000;

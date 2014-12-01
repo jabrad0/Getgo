@@ -19,13 +19,15 @@ def home_page():
     #     address = "1807 Telegraph Avenue"
         #pdb.set_trace()
     print "THIS IS THE ADDRESS: ", address
+    #pdb.set_trace()
     return render_template("index.html", address=address)
 
 @app.route('/get_nearby_businesses', methods=["GET"])
 def get_nearby_points():
+    #pdb.set_trace()
     latitude = float(request.args.get("lat"))
     longitude = float(request.args.get("lng"))
-    #points = jsonify(latitude=lat, longitude=lng)  
+    
     yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
     yelp_call_results_json = json.dumps(yelp_call_results)
     #print type(yelp_call_results_json) #--> string 
@@ -34,11 +36,12 @@ def get_nearby_points():
 
 @app.route('/get_public_art', methods=["GET"])
 def get_public_art():
-    return public_art.public_art_data()
+    return public_art.public_art_data() #this is json file
 
 @app.route('/js/mapping.js')
 def mapping_js():
     return app.send_static_file('js/mapping.js')
+    #send_static_file is flask function used internally to send static file from static folder to browser
 
 
 if __name__ == "__main__":

@@ -1,11 +1,16 @@
-var modal_places_visited = [];
-
+/**
+ * Renders map and pins showing art and wine near a current input location.
+ * 
+ *  
+ * This script renders a Google map centered on Oakland CA and showing the bike layer.  The map is rendered via the Google Maps JavaScript API v3. The script   converts the input address to lat/lng coordinates via the Google Geocoder API. The script parses the coordinates then passes them to a function that retrieves data (via $.getJSON) from a static file (JSON) and two Yelp api calls(python)).  This data is returned, the python data set is converted to JSON, map pins are generated and dropped.  Each pin is clickable for more information and directions (also clickable). Directions are rendered via the Google API. More pins can be clicked for further directions - all places with directions clicked are logged on a modal dialog box that appears when "View Your Stroll" is clicked.  The modal dialog box only resets when the application is refreshed.
+ */
 function log_places_visited (title, num_miles_between ){
   modal_places_visited.push({title: title, dist: num_miles_between});
   //console.log(modal_places_visited[0].title);
   //console.log(typeof(modal_places_visited[0].dist));
 }
 
+var modal_places_visited = [];
 ////// From Google - Initializes map of Oakland centered on lat, long listed'''
 $(document).ready(function(){
   var mapOptions = {
@@ -13,14 +18,14 @@ $(document).ready(function(){
     center: myLatlng
     };
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  
-  
+
   var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
 
-  $('#button-overlay').click(function(e){
+//////My code to add details to 'View your stroll'
+  $('#button-overlay').click(function(event){
     var total_dist_trip = 0;
-    e.preventDefault();
+    event.preventDefault(); 
     for (i=0; i<modal_places_visited.length; i++) {   
       //total_dist = modal_places_visited[i].dist;
       $("#places_visited").append(modal_places_visited[i].title + "\t \t" + modal_places_visited[i].dist + '<br>')
@@ -28,11 +33,11 @@ $(document).ready(function(){
       total_dist_trip += distance;
     };
     total_dist_trip_rounded = total_dist_trip.toFixed(1)
-    $("#places_visited").append('You have biked:  ' + total_dist_trip + ' miles')
+    $("#places_visited").append('<strong>' + 'You have biked:  ' + total_dist_trip + ' miles' + '</strong>')
   })
-
-  $('#button-overlay').click(function(e){
-    e.preventDefault();
+      ///Toggle to hide/unhide 'View Your Stroll"'
+  $('#button-overlay').click(function(event){
+    event.preventDefault();
     $('#modal_places_visited').removeClass('hidden').click(function(){
       $("#places_visited").empty()
       $(this).addClass('hidden') //addClass is jquery method must be called on jquery object so $() converts 'this' to a jquery object 
@@ -53,7 +58,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
     var miles_between = [];
     
     var handleBusinessResults = function(data, lat_starting, lng_starting){
-      Object.keys(data)
+      Object.keys(data) 
       .forEach(function(title) {
         var attributes = data[title];
         if (attributes.categories[0][0] === "Art Galleries") {
@@ -106,7 +111,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       })
       .forEach(function(title){
         var attributes = data[title];
-        //console.log(attributes.url);
+        
         var marker_public_art = new google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP,
@@ -181,7 +186,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
         title: "Your Starting Point"
       });
       markers.push(marker);
-      //Now Send the user input geocoded address (lat lng) to webapp.py
+      
       //parses the json for you instead of leaving it as a string.
       $.getJSON("/get_nearby_businesses", {lat: lat, lng: lon}).done(function(data){
         handleBusinessResults(data, lat, lon);
@@ -192,7 +197,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       });
     }
 
-    function dropMarkerAndGetNearbyPoints (results, status){ //results = geocoderRequest (lat / long via user)
+    function defineStartLatLng (results, status){ //results = geocoderRequest (lat / long via user)
       if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
         var result = results[0];
         var lat_starting = result.geometry.location.lat();
@@ -208,8 +213,9 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
     var geocoderRequest = {
       address: bike.address,
       bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() - 2, myLatlng.lng() -2), new google.maps.LatLng(myLatlng.lat() + 2, myLatlng.lng() + 2))
-    };
-    geocoder.geocode(geocoderRequest, dropMarkerAndGetNearbyPoints);
+    };//call the geocode method of the geocoder object
+       // (request value, function(results, status) {}); --->callback function
+    geocoder.geocode(geocoderRequest, defineStartLatLng);
   };
 })
 (window.bike); // iife

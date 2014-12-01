@@ -14,6 +14,7 @@
         address: "{{ address }}"
       };
       </script>
+      <script src="/js/mapping.js"></script> 
       <script>$(document).ready(function(){
               $('#close-btn').click(function(){
                 $('#address-form').addClass('hidden')
@@ -24,12 +25,12 @@
               })
             })
     </script>
-    <script src="/js/mapping.js"></script> 
+    
     <style>
       {% if address %}
-      #address-form {
-        display: none;  /* block, inline */
-      }
+        #address-form {
+          display: none;  /* block, inline */
+        }
       {% else %}
       #show-address-form {
         display: none;
@@ -39,7 +40,9 @@
   </head>
   
   <body>
+    
     <button id="start-over-btn">Start Over!</button>
+    
     <div id="legend">
         <h3>Legend</h3>
         <div><img src="{{ url_for('static', filename = 'css/images/icons/red-dot.png')}}" alt="current location" style="width:30px">Current Location</div>
@@ -47,6 +50,7 @@
         <div><img src="{{ url_for('static', filename = 'css/images/icons/green-dot.png')}}" alt="art gallery" style="width:30px">Art Gallery</div>
         <div><img src="{{ url_for('static', filename = 'css/images/icons/yellow-dot.png')}}" alt="public art" style="width:30px">Public Art</div>
     </div> 
+    
     <div id="address-form">
         <div id="close-btn"><button>&times;</button></div>
         <div id="title">
@@ -59,12 +63,16 @@
           </form>
         </div>
     </div>
+    
     <div id="button-overlay"><a href='#'>View Your Stroll!</a></div> 
+    
     <div id="map-canvas"></div>
+    
     <div class="overlay hidden" id="modal_places_visited">
         <div id="places_visited">
-            <h4>Your Trip</h4>
+            <h3>Your Trip</h3>
         </div>
-    </div> 
+    </div>
+  
   </body>
 </html>
