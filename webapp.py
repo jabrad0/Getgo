@@ -18,7 +18,7 @@ def home_page():
 def get_nearby_points():
     latitude = float(request.args.get("lat"))
     longitude = float(request.args.get("lng"))
-    
+
     yelp_call_results = yelp.yelp_api_calls(latitude, longitude)
     yelp_call_results_json = json.dumps(yelp_call_results)
     return yelp_call_results_json

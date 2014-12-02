@@ -9,8 +9,7 @@ function log_places_visited (title, num_miles_between ) {
 }
 
 var modal_places_visited = [];
-////// From Google - Initializes map of Oakland centered on lat, long listed'''
-$(document).ready(function(){
+$(document).ready(function() {
   var mapOptions = {
     zoom: 14,
     center: myLatlng
@@ -21,20 +20,20 @@ $(document).ready(function(){
     bikeLayer.setMap(map);
 
 
-  $('#button-overlay').click(function(event){
+  $('#button-overlay').click(function(event) {
     var total_dist_trip = 0;
     event.preventDefault(); 
     for (i=0; i<modal_places_visited.length; i++) {   
       $("#places_visited").append(modal_places_visited[i].title + "\t \t" + modal_places_visited[i].dist + '<br>')
       distance = parseFloat(modal_places_visited[i].dist, 10);
-      total_dist_trip += distance;
+      total_dist_trip += distance.toFixed(1);
     };
     total_dist_trip_rounded = total_dist_trip.toFixed(1)
     $("#places_visited").append('<strong>' + 'You have biked:  ' + total_dist_trip + ' miles' + '</strong>')
   })
-  $('#button-overlay').click(function(event){
+  $('#button-overlay').click(function(event) {
     event.preventDefault();
-    $('#modal_places_visited').removeClass('hidden').click(function(){
+    $('#modal_places_visited').removeClass('hidden').click(function() {
       $("#places_visited").empty()
       $(this).addClass('hidden')
     });
@@ -43,16 +42,16 @@ $(document).ready(function(){
 
 var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 
-(function (bike){
-  bike.initialize = function initialize(){  
-    var infowindow = new google.maps.InfoWindow({
+(function (bike) {
+  bike.initialize = function initialize() {  
+    var infowindow = new google.maps.InfoWindow( {
       maxWidth: 1000
     });
     var markers = [];
     var array_places = [];
     var miles_between = [];
     
-    var handleBusinessResults = function(data, lat_starting, lng_starting){
+    var handleBusinessResults = function(data, lat_starting, lng_starting) {
       Object.keys(data) 
       .forEach(function(title) {
         var attributes = data[title];
@@ -101,16 +100,16 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       }); 
     };
 
-    var handleArtResults = function(data, lat_starting, lng_starting){
+    var handleArtResults = function(data, lat_starting, lng_starting) {
       var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(lat_starting - 0.01, lng_starting - 0.01), new google.maps.LatLng(lat_starting + 0.01, lng_starting + 0.01)); 
       Object.keys(data)
-      .filter(function(title){
+      .filter(function(title) {
         return bounds.contains(new google.maps.LatLng(data[title].latitude, data[title].longitude));
       })
       .forEach(function(title){
         var attributes = data[title];
         
-        var marker_public_art = new google.maps.Marker({
+        var marker_public_art = new google.maps.Marker( {
           map: map,
           animation: google.maps.Animation.DROP,
           position: new google.maps.LatLng(attributes.latitude, attributes.longitude),
@@ -147,7 +146,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       });
     };
 
-    function renderDirections (title, pos1, pos2){
+    function renderDirections (title, pos1, pos2) {
       var directions_service = new google.maps.DirectionsService();
       var directionsDisplay = new google.maps.DirectionsRenderer();
           directionsDisplay.setMap(map);
@@ -158,7 +157,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           travelMode: google.maps.TravelMode.BICYCLING,
       }; 
 
-      directions_service.route(directionsRequest, function(result, status){
+      directions_service.route(directionsRequest, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(result);
           
@@ -184,7 +183,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       });
       markers.push(marker);
       
-      $.getJSON("/get_nearby_businesses", {lat: lat, lng: lon}).done(function(data){
+      $.getJSON("/get_nearby_businesses", {lat: lat, lng: lon}).done(function(data) {
         handleBusinessResults(data, lat, lon);
       });
       
@@ -193,7 +192,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       });
     }
 
-    function defineStartLatLng (results, status){ 
+    function defineStartLatLng (results, status) { 
       if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
         var result = results[0];
         var lat_starting = result.geometry.location.lat();

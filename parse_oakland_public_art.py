@@ -21,20 +21,11 @@ def public_art_data():
     json_data=open('Oakland_Public_Art_raw.json')
     data_python = json.load(json_data)
     data =  data_python.get("data")
-    #print data[0][8]
-
-    #i = 0
-    #for art in data:
-    #    print i
-     #   print data[i][8]
-      #  i += 1
-    #data = a list
-
+    
     public_art_dictionary = {}
 
     for item in data:
         project_title = xstr(item[8])
-        #below: the download file had 'NoneType' so did this to convert it to typ(int)
         year_install = int(0 if item[11] is None else item[11])
         permanent = xstr(item[12])
         exterior = xstr(item[13])
@@ -47,7 +38,6 @@ def public_art_data():
         zip_code = ast.literal_eval(address_uni).get("zip")
         latitude = float(item[16][1])
         longitude = float(item[16][2])
-        #print project_title
 
         public_art_dictionary[project_title] = {
             "year_install" : year_install,
@@ -62,9 +52,6 @@ def public_art_data():
             "latitude" : latitude,
             "longitude" : longitude,
         } 
-    public_art_dictionary_json = json.dumps(public_art_dictionary)   
-    #print public_art_dictionary_json
+    public_art_dictionary_json = json.dumps(public_art_dictionary)
     json_data.close()
     return public_art_dictionary_json 
-
-#public_art_data()

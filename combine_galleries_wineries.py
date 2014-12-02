@@ -1,8 +1,5 @@
 import yelp_api_galleries
 import yelp_api_wineries
-#Entire data set as python list from API call ---> 20 businesses at a time
-#My api_call only has multiple dictionaries in a list,
-#def namethisfucntion():
 
 def yelp_api_calls(latitude, longitude):
 
@@ -13,25 +10,12 @@ def yelp_api_calls(latitude, longitude):
 
     my_business_dictionary = {}
 
-    #Made several api calls and appended list with results of each, thus
-    # api_call_galleries is a list of dictionaries which I need to itterate over
-    # to combine into 1 dictionary
-
     for gallery in api_call_galleries:
         all_business = gallery.get("businesses")
 
-    #This works too but bad format to use the i like that:
-    #for i in range(6):
-    #    all_business = api_call_galleries[i].get("businesses")
-
-    #print type(all_business) ---> all_business = <type "list">
-
-    #Itterate over api_calls and create dictionary {business name : [attributes]}
-    #business = a dictionary of one businesse's attributes
-
         for business in all_business:
             name = business.get("name")
-            _loc = business.get("location")  #_loc --> notation indicates this is for me, not important part of code
+            _loc = business.get("location")
             address = _loc.get("address")
             city = _loc.get("city")
             state = _loc.get("state_code")
@@ -58,9 +42,7 @@ def yelp_api_calls(latitude, longitude):
                 "url": url,
                 "latitude": latitude,
                 "longitude": longitude,
-                "categories": categories,  # nice practice in python to add comma  
-                #after last item so if add another item that entire line does not look like it was edited.
-                #just the line that was added will be highlighted as changed. can not do in JS
+                "categories": categories,
             }
 
     for winery in all_wineries:
@@ -92,12 +74,8 @@ def yelp_api_calls(latitude, longitude):
             "categories": categories 
         }
 
-    #length_ = len(my_business_dictionary) 
-    #print my_business_dictionary.get("LuckyLo Art Gallery & Boutique") 
     return my_business_dictionary
-    #print my_business_dictionary     
-
-
+    
 """ 
 NOTES:
 keys with in each business dictionary 
