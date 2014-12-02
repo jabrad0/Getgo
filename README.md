@@ -56,15 +56,9 @@ token_secret = "xxxxxxxxxxxxx"<br>
   <li>Allow the removal of selected routes if desired </li>
   <li>Store visited locations per user</li>
   <li>Add more dynamic inputs (search radius, search categories)</li>
-  <li>Improve overall design and user experience</li>
+  <li>Improve overall design and user experience</li></ul>
 
 <h3><strong>Acknowledgments</strong></h3>
-I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  I am in awe of how much I have learned in such a short time.
+I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  I am in awe of how much I have learned in such a short time and I am so inspired and excited to keep on learning.
 
-As well, I have been so grateful to be paired with three awesome mentors:
-
-<uo><li>Jeff Meadows</li>
-<li>Jen-Mei Wu</li>
-<li>Lauren Budorick</li><br>
-
-Thank you so much! 
+As well, I am grateful to have been paired with three incredibly awesome mentors: Jeff Meadows, Jen-Mei Wu, and Lauren Budorick. Thank you so much! 
