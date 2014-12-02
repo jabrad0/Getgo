@@ -26,10 +26,10 @@ $(document).ready(function() {
     for (i=0; i<modal_places_visited.length; i++) {   
       $("#places_visited").append(modal_places_visited[i].title + "\t \t" + modal_places_visited[i].dist + '<br>')
       distance = parseFloat(modal_places_visited[i].dist, 10);
-      total_dist_trip += distance.toFixed(1);
+      total_dist_trip += distance;
     };
     total_dist_trip_rounded = total_dist_trip.toFixed(1)
-    $("#places_visited").append('<strong>' + 'You have biked:  ' + total_dist_trip + ' miles' + '</strong>')
+    $("#places_visited").append('<strong>' + 'You have biked:  ' + total_dist_trip_rounded + ' miles' + '</strong>')
   })
   $('#button-overlay').click(function(event) {
     event.preventDefault();
