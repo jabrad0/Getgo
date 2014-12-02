@@ -6,7 +6,6 @@ html, body, #map-canvas {
 }
 
 #start-over-btn:hover {
-  /*box-shadow: 10px 10px rgba(0,40,100,.8);*/
   cursor: pointer;
   background-color: rgba(17, 17, 230, .65);
   bottom: 250px; 

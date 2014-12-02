@@ -9,18 +9,17 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
     
     <script> 
-     // global variable for app
       window.bike = {
         address: "{{ address }}"
       };
       </script>
-      <script src="/js/mapping.js"></script> 
-      <script>$(document).ready(function(){
-              $('#close-btn').click(function(){
+      <script src="/static/js/mapping.js"></script> 
+      <script>$(document).ready(function() {
+              $('#close-btn').click(function() {
                 $('#address-form').addClass('hidden')
               })
 
-              $('#start-over-btn').click(function(){
+              $('#start-over-btn').click(function() {
                 window.location.replace('/');
               })
             })
@@ -29,7 +28,7 @@
     <style>
       {% if address %}
         #address-form {
-          display: none;  /* block, inline */
+          display: none;
         }
       {% else %}
       #show-address-form {
