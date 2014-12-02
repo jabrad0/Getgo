@@ -30,8 +30,8 @@ Getgo materialized out of Juli’s passion for biking and maps and her wife’s 
     <li>Now install packages that are required for this project: <em>$pip install -r requirements.txt</em></li></ol>
 
 <h3><strong>Yelp API Key is Required</strong></h3>
-You will need own Yelp API keys (and a Yelp account).
-<a href="http://www.yelp.com/developers/documentation/v2/overview"> Go here</a><br>
+You will need <a href="http://www.yelp.com/developers/documentation/v2/overview"> Yelp API Keys</a> (and a Yelp account),
+
 
 Now create a separate file (in Sublime or Xcode, etc.) containing:<br>
 consumer_key = “xxxxxxxxxxxxx"<br>
