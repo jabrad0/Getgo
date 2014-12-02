@@ -44,10 +44,18 @@
     
     <div id="legend">
         <h3>Legend</h3>
-        <div><img src="{{ url_for('static', filename = 'css/images/icons/red-dot.png')}}" alt="current location" style="width:30px">Current Location</div>
-        <div><img src="{{ url_for('static', filename = 'css/images/icons/purple-dot.png')}}" alt="winery" style="width:30px">Wine</div>
-        <div><img src="{{ url_for('static', filename = 'css/images/icons/green-dot.png')}}" alt="art gallery" style="width:30px">Art Gallery</div>
-        <div><img src="{{ url_for('static', filename = 'css/images/icons/yellow-dot.png')}}" alt="public art" style="width:30px">Public Art</div>
+        <div><img src="{{ url_for('static', filename = 
+          'css/images/icons/red-dot.png')}}" alt="current location" 
+          style="width:30px">Current Location</div>
+        <div><img src="{{ url_for('static', filename = 
+          'css/images/icons/purple-dot.png')}}" alt="winery" 
+          style="width:30px">Wine</div>
+        <div><img src="{{ url_for('static', filename = 
+          'css/images/icons/green-dot.png')}}" alt="art gallery" 
+          style="width:30px">Art Gallery</div>
+        <div><img src="{{ url_for('static', filename = 
+          'css/images/icons/yellow-dot.png')}}" alt="public art" 
+          style="width:30px">Public Art</div>
     </div> 
     
     <div id="address-form">
@@ -56,7 +64,8 @@
             <h1>Getgo</h1>
             <h2>Get your art on the go!</h2>
         </div>    
-        <div class="form"><form action="/" method="GET"><h4>Enter your starting point address:</h4><br>
+        <div class="form"><form action="/" 
+          method="GET"><h4>Enter your starting point address:</h4><br>
           <input type="text" name="address" id="address"> 
           <button id="go-button" type="submit">Go!</button>
           </form>
