@@ -19,8 +19,8 @@ Currently the application uses the Google Maps Javascript API v3 and the Yelp AP
 <li>JSON</li>
 <li>jQuery</li>
 <li>HTML/CSS</li>
-<li>Google Maps API</li>
-  <li>Yelp API</li></ul></div>
+<li>Google Maps Javascript API v3</li>
+<li>Yelp API 2.0</li></ul></div>
 
 
 
@@ -48,7 +48,7 @@ token_secret = "xxxxxxxxxxxxx"<br>
 <li>The .json file is a static json data file from  <a href="http://data.openoakland.org/group/infrastructure?f[0]=field_tags%3A111">data.openoakland.com</a> which is parsed by the parse_oakland_public_art.py script.</li>
 <li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li></ul>
 
-<h3><strong>Future Plansish List</strong></h3>
+<h3><strong>Future Plans/ Current Wish List</strong></h3>
 <ul><li>Edit markers to show sequential places visited A, B, C...</li>
   <li>Convert from Yelp API to Foursquare or Google Places API</li>
   <li>Convert to Mapbox mapping API</li>
@@ -56,4 +56,15 @@ token_secret = "xxxxxxxxxxxxx"<br>
   <li>Allow the removal of selected routes if desired </li>
   <li>Store visited locations per user</li>
   <li>Add more dynamic inputs (search radius, search categories)</li>
-  <li>Improve upon user experience design</li>
+  <li>Improve overall design and user experience</li>
+
+<h3><strong>Acknowledgments</strong></h3>
+I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  I am in awe of how much I have learned in such a short time.
+
+As well, I have been so grateful to be paired with three awesome mentors:
+
+<uo><li>Jeff Meadows</li>
+<li>Jen-Mei Wu</li>
+<li>Lauren Budorick</li><br>
+
+Thank you so much! 
