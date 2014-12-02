@@ -48,18 +48,6 @@ token_secret = "xxxxxxxxxxxxx"<br>
 <li>The .json file is a static json data file from  <a href="http://data.openoakland.org/group/infrastructure?f[0]=field_tags%3A111">data.openoakland.com</a> which is parsed by the parse_oakland_public_art.py script.</li>
 <li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li></ul>
 
-<h3><strong>Future Plans/ Current Wish List</strong></h3>
-<ul><li>Edit markers to show sequential places visited A, B, C...</li>
-  <li>Show bike directions</li>
-  <li>Convert from Yelp API to Foursquare or Google Places API</li>
-  <li>Convert to Mapbox mapping API</li>
-  <li>Show current events (monthly art events) and tie into Oakland Art Murmur</li>
-  <li>Allow the removal of selected routes if desired </li>
-  <li>Store visited locations per user</li>
-  <li>Add more dynamic inputs (search radius, search categories)</li>
-  <li>Improve overall design and user experience</li>
-  <li>Optimize for mobile application</li></ul>
-
 <h3><strong>Acknowledgments</strong></h3>
 I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  I am in awe of how much I have learned in such a short time and I am so inspired and excited to keep on learning.
 
