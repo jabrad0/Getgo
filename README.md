@@ -4,7 +4,7 @@ Getgo - Get your art on the go
 Hackbright Final Project - Fall 2014
 
 <h3><strong>Summary</strong></h3>
-Getgo materialized out of Juli’s passion for biking and maps and her partner's love of art and wine. Currently an arts and culture scene is exploding in Oakland, but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland, California via bike. By entering a starting point, nearby wine and art destinations are provided, then by clicking on a destination a suggested bike route is presented.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
+Getgo materialized out of Juli’s passion for biking and maps and her partner's love of art and wine. Currently an arts and culture scene is exploding in Oakland, but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland, California bike. By entering a starting point, nearby wine and art destinations are provided, then by clicking on a destination a suggested bike route is presented.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
 
 ![Homepage screenshot](/static/css/screenshots/homepage.png)
 
@@ -46,4 +46,14 @@ token_secret = "xxxxxxxxxxxxx"<br>
 <h3><strong>File Guide</strong></h3>
 <ul><li>Getgo is run from the file webapp.py: <em>$python webapp.py.</em></li>
 <li>The .json file is a static json data file from  <a href="http://data.openoakland.org/group/infrastructure?f[0]=field_tags%3A111">data.openoakland.com</a> which is parsed by the parse_oakland_public_art.py script.</li>
-  <li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li>
+<li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li></ul>
+
+<h3><strong>Future Plansish List</strong></h3>
+<ul><li>Edit markers to show sequential places visited A, B, C...</li>
+  <li>Convert from Yelp API to Foursquare or Google Places API</li>
+  <li>Convert to Mapbox mapping API</li>
+  <li>Show current events (monthly art events) and tie into Oakland Art Murmur</li>
+  <li>Allow the removal of selected routes if desired </li>
+  <li>Store visited locations per user</li>
+  <li>Add more dynamic inputs (search radius, search categories)</li>
+  <li>Improve upon user experience design</li>
