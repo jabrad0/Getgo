@@ -17,26 +17,26 @@ Getgo materialized out of Juli’s passion for biking and maps and her wife’s 
 <li>Google Maps API</li>
   <li>Yelp API</li></ul></div>
 
+![Homepage screenshot](/static/css/screenshots/homepage.png)
 
 <h3><strong>Install Requirements</strong></h3>
   <ol><li>Clone the repository</li>
     <li>Install <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> (the python package installer) - save pip anywhere you like, then run it from the terminal (you will likely need sudo before): <em>$sudo get-pip.py</em> </li>
-    <li>Create a virtualenv:<em>$pip install virtual env</em></li>
+    <li>Create a virtualenv: <em>$pip install virtual env</em></li>
     <li>Go to the directory from where you will run this application and type: <em>$virtualenv env</em></li>
     <li>Then type: <em>$source env/bin/activate</em></li>
     <li>Now install packages that are required for this project: <em>$pip install -r requirements.txt</em></li></ol>
 
 <h3><strong>Yelp API Key is Required</strong></h3>
 You will need own Yelp API keys (and a Yelp account).
-<a href="http://www.yelp.com/developers/documentation/v2/overview"><br>Go here</a>.<br>
-<br>
+<a href="http://www.yelp.com/developers/documentation/v2/overview"> Go here</a><br>
 
-Now create a separate file (in Sublime or Xcode, etc.) containing:
+Now create a separate file (in Sublime or Xcode, etc.) containing:<br>
 consumer_key = “xxxxxxxxxxxxx"<br>
 consumer_secret = "xxxxxxxxxxxxx"<br>
 token = "xxxxxxxxxxxxx"<br>
 token_secret = "xxxxxxxxxxxxxk"<br>
-<br>
+
 Save this file as: yelp_api_key.py<br>
 
 
