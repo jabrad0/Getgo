@@ -34,15 +34,17 @@ h4 {
 }
 
 #close-btn {
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 100;
   z-index: 1000; 
   position: absolute; 
-  bottom: 235px; 
+  bottom: 280px; 
   right: 5px;
 }
 
+
 #start-over-btn {
+  border-radius: 3%;
   color:white;
   font-size: 15px;
   font-weight: 300;
@@ -55,6 +57,7 @@ h4 {
 }
 
 #overlay-form {
+    border-radius: 3%;
     position: absolute;
     background-color: rgba(0, 0, 0, .75);
     left: 0px;
@@ -66,6 +69,7 @@ h4 {
 }
 
 #address-form { 
+    border-radius: 3%;
     margin: auto;
     top: 0;
     right: 0;
@@ -73,7 +77,7 @@ h4 {
     left: 0;
     position: fixed;
     background-color: #fff;
-    padding: 15px;
+    padding: 50px;
     z-index:1000;
     background-color: rgba(0, 0, 0, .75);
     color: rgba(255,255,255,.93);
@@ -97,6 +101,7 @@ h4 {
 }
 
 .overlay div {
+    border-radius: 3%;
     overflow: auto;
     width:400px;
     margin: 100px auto;
@@ -110,6 +115,7 @@ h4 {
 }
 
 #legend {
+  border-radius: 3%;
   font-size: 15px;
   font-weight: 300;
   z-index: 1000; 
@@ -124,6 +130,7 @@ h4 {
 }
 
 #button-overlay {
+  border-radius: 3%;
   position: absolute; 
   font-size: 25;
   font-weight: 300;

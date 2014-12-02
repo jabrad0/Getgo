@@ -41,7 +41,7 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 (function (bike) {
   bike.initialize = function initialize() {  
     var infowindow = new google.maps.InfoWindow( {
-      maxWidth: 1000
+      minWidth: 5000
     });
     var markers = [];
     var array_places = [];
