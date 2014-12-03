@@ -43,10 +43,10 @@ A log of destinations and milage.
 <h3 id="directions-requirements"><strong>Directions to Install Requirements</strong></h3>
   <ol><li>Clone the repository</li>
     <li>Install <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> (the python package installer) - save pip anywhere you like, then run it from the terminal (you will likely need sudo before): <code>$sudo get-pip.py</code> </li>
-    <li>Create a virtualenv: <em>$pip install virtual env</em></li>
-    <li>Go to the directory where you cloned your repository and type: <em>$virtualenv env</em></li>
-    <li>Then type: <em>$source env/bin/activate</em></li>
-    <li>Now install packages that are required for this project: <em>$pip install -r requirements.txt</em></li></ol>
+    <li>Create a virtualenv: <code>$pip install virtual env</code></li>
+    <li>Go to the directory where you cloned your repository and type: <code>$virtualenv env</code></li>
+    <li>Then type: <code>$source env/bin/activate</code></li>
+    <li>Now install packages that are required for this project: <code>$pip install -r requirements.txt</code></li></ol>
 
 <h3 id="yelp-key"><strong>Yelp API Keys</strong></h3>
 You will need <a href="http://www.yelp.com/developers/documentation/v2/overview"> Yelp API Keys </a> (and a Yelp account) to run this application.<br>
@@ -60,7 +60,7 @@ token_secret = "xxxxxxxxxxxxx"<br>
 
 
 <h3 id="file-guide"><strong>File Guide</strong></h3>
-<ul><li>Getgo is run from the file webapp.py: <em>$python webapp.py.</em></li>
+<ul><li>Getgo is run from the file webapp.py: <code>$python webapp.py.</code></li>
 <li>The .json file is a static json data file from  <a href="http://data.openoakland.org/group/infrastructure?f[0]=field_tags%3A111">data.openoakland.com</a> which is parsed by the parse_oakland_public_art.py script.</li>
 <li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li></ul>
 
