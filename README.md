@@ -17,10 +17,13 @@ Getgo materialized out of Juli’s passion for biking and maps and her wife's lo
 
 <h3 id="screenshots"><strong>Screenshots</strong></h3>
 ![Homepage screenshot](/static/css/screenshots/homepage.png)<br>
-Art and wine near the current location with details about one location displayed.
+<br>
+Art and wine near the current location with details about one location showing.
 ![Address Entered screenshot](/static/css/screenshots/address_entered.png)<br>
-Suggested bike routes to visit select locations.
+<br>
+Suggested bike routes.
 ![Directions screenshot](/static/css/screenshots/directions.png)<br>
+<br>
 A log of destinations and milage.
 ![Stroll screenshot](/static/css/screenshots/stroll.png)<br>
 
