@@ -36,6 +36,7 @@ A log of destinations and milage.
 <li>jQuery</li>
 <li>HTML/CSS</li>
 <li>Google Maps Javascript API v3</li>
+<li>Google Maps Geocoder API v3</li>
 <li>Yelp API 2.0</li></ul>
 
 <h3 id="directions-requirements"><strong>Directions to Install Requirements</strong></h3>
