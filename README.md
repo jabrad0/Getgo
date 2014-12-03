@@ -4,7 +4,9 @@ Getgo - Get your art on the go
 Hackbright Final Project - Fall 2014
 
 <h3><strong>Summary</strong></h3>
-Getgo materialized out of Juli’s passion for biking and maps and her wife's love of art and wine. Currently an arts and culture scene is exploding in Oakland (California), but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland via bike. By entering a starting point, nearby wine and art destinations are provided, then by clicking on a destination details about that location are shown and directions by bike may be rendered.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
+Getgo materialized out of Juli’s passion for biking and maps and her wife's love of art and wine. Currently an arts and culture scene is exploding in Oakland (California), but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland via bike. By entering a starting point, nearby wine and art destinations are provided.  By clicking on a destination, details about that location are shown and directions by bike may be rendered.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
+
+[Data](Technology Stack)
 
 ![Homepage screenshot](/static/css/screenshots/homepage.png)
 ![Address Entered screenshot](/static/css/screenshots/address_entered.png)
@@ -13,7 +15,7 @@ Getgo materialized out of Juli’s passion for biking and maps and her wife's lo
 
 <div><h3><strong>Technology Stack</strong></h3>
 Getgo is a flask application with Javascript, HTML, and CSS implementing the frontend.  
-Currently the application uses the Google Maps Javascript API v3 and the Yelp API 2.0.
+Currently the application uses the Google Maps Javascript API v3 and the Yelp API 2.0.<br>
 
 <ul><li>Python</li>
 <li>Flask</li>
@@ -38,7 +40,7 @@ Currently the application uses the Google Maps Javascript API v3 and the Yelp AP
 <h3><strong>Yelp API Key is Required to Run this Application</strong></h3>
 You will need <a href="http://www.yelp.com/developers/documentation/v2/overview"> Yelp API Keys </a> (and a Yelp account).<br>
 
-Create a separate file (Sublime or Xcode, etc.) in the project directory and save this files as: <em>/yelp_api_key.py</em><br> Type the following in this file and insert your API keys:<br>
+Create a separate file (Sublime or Xcode, etc.) in the project directory and save this file as: <em>/yelp_api_key.py</em><br> Type the following in this file and insert your API keys:<br>
 <br>
 consumer_key = “xxxxxxxxxxxxx"<br>
 consumer_secret = "xxxxxxxxxxxxx"<br>
@@ -52,6 +54,4 @@ token_secret = "xxxxxxxxxxxxx"<br>
 <li>The other three .py scripts are run within the application in order to conduct calls to the Yelp API and parse the Yelp API return data.</li></ul>
 
 <h3><strong>Acknowledgments</strong></h3>
-I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  I am in awe of how much I have learned in such a short time and I am so inspired and excited to keep on learning.
-
-As well, I am grateful to have been paired with three incredibly awesome mentors: Jeff Meadows, Jen-Mei Wu, and Lauren Budorick. Thank you so much! 
+I want to thank all of the Hackbright staff for their support, guidance, and encouragement day after day.  As well, I am grateful to have been paired with three incredibly awesome mentors: Jeff Meadows, Jen-Mei Wu, and Lauren Budorick. Thank you so much! 
