@@ -6,7 +6,7 @@ Hackbright Final Project - Fall 2014
 <h3><strong>Summary</strong></h3>
 Getgo materialized out of Juli’s passion for biking and maps and her wife's love of art and wine. Currently an arts and culture scene is exploding in Oakland (California), but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland via bike. By entering a starting point, nearby wine and art destinations are provided.  By clicking on a destination, details about that location are shown and directions by bike may be rendered.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
 
-<h3><strong>Table of Contents</strong></h3><br>
+<h3><strong>Table of Contents</strong></h3>
 <a href="#screenshots"> Screenshots </a><br>
 <a href="#technology-stack"> Technology Stack</a><br>
 <a href="#directions-requirements"> Directions to Install Requirements</a><br>
@@ -15,7 +15,7 @@ Getgo materialized out of Juli’s passion for biking and maps and her wife's lo
 <a href="#acknowledgments"> Acknowledgments</a><br>
 
 
-<h3 id="screenshots"><strong>Screenshots</strong></h3><br>
+<h3 id="screenshots"><strong>Screenshots</strong></h3>
 ![Homepage screenshot](/static/css/screenshots/homepage.png)<br>
 ![Address Entered screenshot](/static/css/screenshots/address_entered.png)<br>
 ![Directions screenshot](/static/css/screenshots/directions.png)<br>
