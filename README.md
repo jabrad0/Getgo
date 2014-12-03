@@ -38,8 +38,6 @@ A log of destinations and milage.
 <li>Google Maps Javascript API v3</li>
 <li>Yelp API 2.0</li></ul>
 
-
-
 <h3 id="directions-requirements"><strong>Directions to Install Requirements</strong></h3>
   <ol><li>Clone the repository.</li>
     <li>Install <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> (the python package installer) - save pip anywhere you like, then run it from the terminal (you will likely need sudo before): <code>$sudo get-pip.py</code> </li>
