@@ -27,7 +27,7 @@ Suggested bike routes.
 A log of destinations and milage.
 ![Stroll screenshot](/static/css/screenshots/stroll.png)<br>
 
-<div id="technology-stack"><h3><strong>Technology Stack</strong></h3>
+<h3 id="technology-stack"><strong>Technology Stack</strong></h3>
 Getgo is a flask application with Javascript, HTML, and CSS implementing the frontend.  
 Currently the application uses the Google Maps Javascript API v3 and the Yelp API 2.0.<br>
 
@@ -39,7 +39,7 @@ Currently the application uses the Google Maps Javascript API v3 and the Yelp AP
 <li>jQuery</li>
 <li>HTML/CSS</li>
 <li>Google Maps Javascript API v3</li>
-<li>Yelp API 2.0</li></ul></div>
+<li>Yelp API 2.0</li></ul>
 
 
 
