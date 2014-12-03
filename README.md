@@ -42,7 +42,7 @@ A log of destinations and milage.
 
 <h3 id="directions-requirements"><strong>Directions to Install Requirements</strong></h3>
   <ol><li>Clone the repository</li>
-    <li>Install <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> (the python package installer) - save pip anywhere you like, then run it from the terminal (you will likely need sudo before): <em>$sudo get-pip.py</em> </li>
+    <li>Install <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> (the python package installer) - save pip anywhere you like, then run it from the terminal (you will likely need sudo before): <code>$sudo get-pip.py</code> </li>
     <li>Create a virtualenv: <em>$pip install virtual env</em></li>
     <li>Go to the directory where you cloned your repository and type: <em>$virtualenv env</em></li>
     <li>Then type: <em>$source env/bin/activate</em></li>
