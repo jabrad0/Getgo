@@ -2,7 +2,7 @@ import os
 import rauth
 import pprint
 import json
-import yelp_api_key as keys;
+#import yelp_api_key as keys;
 
 #See the official Yelp API for more details: 
 #http://www.yelp.com/developers/documentation
