@@ -1,0 +1,12 @@
+Flask==0.9
+Flask-SQLAlchemy==0.16
+Flask-WTF==0.8
+Jinja2==2.6
+MarkupSafe==0.23
+SQLAlchemy==0.7.9
+WTForms==1.0.2
+Werkzeug==0.8.3
+itsdangerous==0.24
+rauth==0.7.0
+requests==2.4.3
+wsgiref==0.1.2
