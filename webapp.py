@@ -30,5 +30,5 @@ def get_public_art():
 
 if __name__ == "__main__":
     PORT = int(os.environ.get("PORT", 5000))
-    DEBUG = NO_DEBUG not in os.environ
+    DEBUG = "NO_DEBUG" not in os.environ
     app.run(debug=DEBUG, port=PORT, host="0.0.0.0")
