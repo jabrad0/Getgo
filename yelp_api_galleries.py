@@ -1,3 +1,4 @@
+import os
 import rauth
 import pprint
 import json
@@ -18,16 +19,20 @@ def get_search_parameters(latitude, longitude, offset):
     return params
 
 def get_results(params):
-    consumer_key = keys.consumer_key
-    consumer_secret = keys.consumer_secret
-    token = keys.token
-    token_secret = keys.token_secret
+    # consumer_key = keys.consumer_key
+    # consumer_secret = keys.consumer_secret
+    # token = keys.token
+    # token_secret = keys.token_secret
 
     session = rauth.OAuth1Session(
-        consumer_key = consumer_key,
-        consumer_secret = consumer_secret,
-        access_token = token,
-        access_token_secret = token_secret,
+        consumer_key = os.environ.get('HK_CONSUMER_KEY', 'CONSUMER_KEY'),
+        consumer_secret = os.environ.get('HK_CONSUMER_SECRET','CONSUMER_SECRET'),
+        access_token = os.environ.get('HK_TOKEN','TOKEN'),
+        access_token_secret = os.environ.get('HK_TOKEN_SECRET','TOKEN_SECRET'),
+        # consumer_key = consumer_key,
+        # consumer_secret = consumer_secret,
+        # access_token = token,
+        # access_token_secret = token_secret,
     )
     request = session.get("http://api.yelp.com/v2/search", params=params)
     data = request.json()
