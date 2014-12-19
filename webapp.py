@@ -28,4 +28,5 @@ def get_public_art():
     return public_art.public_art_data() 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    PORT = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, port=PORT, host="0.0.0.0")
