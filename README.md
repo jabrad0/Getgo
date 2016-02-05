@@ -4,6 +4,7 @@ Developer's Note: Address entered must be an actual address (try 201 Orange Stre
 This will be fixed in the next version 2.0.
 
 Hackbright Final Project - Fall 2014
+https://getartandgo.herokuapp.com/
 
 <h3><strong>Summary</strong></h3>
 Getgo materialized out of Juli’s passion for biking and maps and love of art and wine. Currently an arts and culture scene has been exploding in Oakland (California), but there is no application that helps navigate it. Getgo is designed to help plan an art stroll through Oakland via bike. By entering a starting point, nearby wine and art destinations are provided.  By clicking on a destination, details about that location are shown and directions by bike may be rendered.  The day’s destinations and mileage are stored and presented at anytime during the stroll.</div><br>
