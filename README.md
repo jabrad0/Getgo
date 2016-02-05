@@ -1,7 +1,7 @@
 Getgo - Get your art on the go
 =====
 Developer's Note: Address entered must be an actual address (try 201 Orange Street).
-This will be fixed in the next version 2.0.
+This will be fixed in the next version - 2.0.
 
 Hackbright Final Project - Fall 2014
 https://getartandgo.herokuapp.com/
