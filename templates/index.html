@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <!-- outdated URL move to style sheet -->
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"> -->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Getgo-Get your art on the go!</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/yui.css') }}">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
-    
-    <script> 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <script>
       window.bike = {
         address: "{{ address }}"
       };
       </script>
-      <script src="/static/js/mapping.js"></script> 
+      <script src="/static/js/mapping.js"></script>
       <script>$(document).ready(function() {
               $('#close-btn').click(function() {
                 $('#address-form').addClass('hidden')
@@ -25,7 +27,7 @@
               })
             })
     </script>
-    
+
     <style>
       {% if address %}
         #address-form {
@@ -38,50 +40,51 @@
       {% endif %}
     </style>
   </head>
-  
+
   <body>
-    
+
     <button id="start-over-btn">Start Over!</button>
-    
+
     <div id="legend">
         <h3>Legend</h3>
-        <div><img src="{{ url_for('static', filename = 
-          'css/images/icons/red-dot.png')}}" alt="current location" 
+        <div><img src="{{ url_for('static', filename =
+          'css/images/icons/red-dot.png')}}" alt="current location"
           style="width:30px">Current Location</div>
-        <div><img src="{{ url_for('static', filename = 
-          'css/images/icons/purple-dot.png')}}" alt="winery" 
+        <div><img src="{{ url_for('static', filename =
+          'css/images/icons/purple-dot.png')}}" alt="winery"
           style="width:30px">Wine</div>
-        <div><img src="{{ url_for('static', filename = 
-          'css/images/icons/green-dot.png')}}" alt="art gallery" 
+        <div><img src="{{ url_for('static', filename =
+          'css/images/icons/green-dot.png')}}" alt="art gallery"
           style="width:30px">Art Gallery</div>
-        <div><img src="{{ url_for('static', filename = 
-          'css/images/icons/yellow-dot.png')}}" alt="public art" 
+        <div><img src="{{ url_for('static', filename =
+          'css/images/icons/yellow-dot.png')}}" alt="public art"
           style="width:30px">Public Art</div>
-    </div> 
-    
+    </div>
+
     <div id="address-form">
         <div id="close-btn"><button>&times;</button></div>
         <div id="title">
             <h1>Getgo</h1>
             <h2>Get your art on the go!</h2>
-        </div>    
-        <div class="form"><form action="/" 
-          method="GET"><h4>Enter your starting point address:</h4><br>
-          <input type="text" name="address" id="address"> 
+        </div>
+        <div class="form"><form action="/"
+          method="GET"><h4>Enter your starting point address:</h4>
+          <p class="devnote">(Developer's Note: Address must be an actual address such as shown.)</p><br>
+          <input type="text" name="address" id="address" placeholder="201 Orange Street">
           <button class="pure-button-primary" id="go-button" type="submit">Go!</button>
           </form>
         </div>
     </div>
-    
-    <div id="button-overlay"><a href='#'>View Your Stroll!</a></div> 
-    
+
+    <div id="button-overlay"><a href='#'>View Your Stroll!</a></div>
+
     <div id="map-canvas"></div>
-    
+
     <div class="overlay hidden" id="modal_places_visited">
         <div id="places_visited">
             <h3>Your Trip</h3>
         </div>
     </div>
-  
+
   </body>
 </html>

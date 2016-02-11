@@ -10,21 +10,21 @@ $(document).ready(function() {
     };
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var bikeLayer = new google.maps.BicyclingLayer();
-    bikeLayer.setMap(map);
+  // var bikeLayer = new google.maps.BicyclingLayer();
+  //   bikeLayer.setMap(map);
 
 
   $('#button-overlay').click(function(event) {
     var total_dist_trip = 0;
-    event.preventDefault(); 
-    for (i=0; i<modal_places_visited.length; i++) {   
+    event.preventDefault();
+    for (i=0; i<modal_places_visited.length; i++) {
       $("#places_visited").append(modal_places_visited[i].title + "\t \t" +
         modal_places_visited[i].dist + '<br>')
       distance = parseFloat(modal_places_visited[i].dist, 10);
       total_dist_trip += distance;
     };
     total_dist_trip_rounded = total_dist_trip.toFixed(1)
-    $("#places_visited").append('<strong>' + 'You have biked:  ' + 
+    $("#places_visited").append('<strong>' + 'You have biked:  ' +
       total_dist_trip_rounded + ' miles' + '</strong>')
   })
   $('#button-overlay').click(function(event) {
@@ -39,37 +39,37 @@ $(document).ready(function() {
 var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
 
 (function (bike) {
-  bike.initialize = function initialize() {  
+  bike.initialize = function initialize() {
     var infowindow = new google.maps.InfoWindow( {
       minWidth: 5000
     });
     var markers = [];
     var array_places = [];
     var miles_between = [];
-    
+
     var handleBusinessResults = function(data, lat_starting, lng_starting) {
-      Object.keys(data) 
+      Object.keys(data)
       .forEach(function(title) {
         var attributes = data[title];
-        console.log(attributes.categories[0])
+        // console.log(attributes.categories[0])
         if (attributes.categories[0][0] === "Art Galleries") {
-          var icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
-        } 
+          var icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png';
+        }
         else if (attributes.categories[0][0] === "Wineries") {
-          var icon = 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png';
+          var icon = 'https://maps.google.com/mapfiles/ms/icons/purple-dot.png';
         }
         else {
-          var icon = 'http://maps.google.com/mapfiles/ms/icons/grey-dot.png';
+          var icon = 'https://maps.google.com/mapfiles/ms/icons/grey-dot.png';
         }
         var marker_businesses = new google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP,
-          position: new google.maps.LatLng(attributes.latitude, 
+          position: new google.maps.LatLng(attributes.latitude,
             attributes.longitude),
           title: title,
           icon: icon
         });
-     
+
         google.maps.event.addListener(marker_businesses, 'click', function() {
           var header = $('<h3></h3>');
           header.text(title);
@@ -81,43 +81,38 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           var url = $('<div><a href="' + attributes.url + '">Yelp Link</a></div>');
           var directions = $('<button class="info-window-direction-button" />');
           directions.text('Directions');
-          content.append(header);
-          content.append(address);
-          content.append(categories);
-          content.append(url);
-          content.append(directions);
-          
-          infowindow.setContent(content.html()); 
+          content.append(header, address, categories, url, directions);
+          infowindow.setContent(content.html());
           infowindow.open(map, marker_businesses);
           $('.info-window-direction-button').click(function() {
-            renderDirections(title, [lat_starting, lng_starting], 
+            renderDirections(title, [lat_starting, lng_starting],
               [attributes.latitude, attributes.longitude])
           });
-        }); 
+        });
         markers.push(marker_businesses);
-      }); 
+      });
     };
 
     var handleArtResults = function(data, lat_starting, lng_starting) {
-      var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(lat_starting 
-        - 0.01, lng_starting - 0.01), new google.maps.LatLng(lat_starting 
-        + 0.01, lng_starting + 0.01)); 
+      var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(lat_starting
+        - 0.01, lng_starting - 0.01), new google.maps.LatLng(lat_starting
+        + 0.01, lng_starting + 0.01));
       Object.keys(data)
       .filter(function(title) {
-        return bounds.contains(new google.maps.LatLng(data[title].latitude, 
+        return bounds.contains(new google.maps.LatLng(data[title].latitude,
           data[title].longitude));
       })
       .forEach(function(title){
         var attributes = data[title];
-        
+
         var marker_public_art = new google.maps.Marker( {
           map: map,
           animation: google.maps.Animation.DROP,
-          position: new google.maps.LatLng(attributes.latitude, 
+          position: new google.maps.LatLng(attributes.latitude,
             attributes.longitude),
-          icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+          icon: 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
         });
-        
+      //Add event listener to marker, onclick populate with information
         google.maps.event.addListener(marker_public_art, 'click', function() {
           var header = $('<h3></h3>');
           header.text(title);
@@ -130,21 +125,19 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
           exterior.text(attributes.exterior);
           var directions = $('<button class="info-window-direction-button" />');
           directions.text('Directions');
-          content.append(header);
-          content.append(address);
-          content.append(media_detail);
-          content.append(exterior);
-          content.append(directions);
-          infowindow.setContent(content.html()); 
-          
-
+          content.append(header, address, media_detail, exterior, directions);
+          infowindow.setContent(content.html());
+          //same onclick above also opens the infoWindow after it is populated
           infowindow.open(map, marker_public_art);
+
+          //Add clickevent to directions-butttons
           $('.info-window-direction-button').click(function() {
-            renderDirections(title, [lat_starting, lng_starting], 
+            renderDirections(title, [lat_starting, lng_starting],
               [attributes.latitude, attributes.longitude])
             array_places.push(title);
           });
         });
+        //Add marker to that array "markers"
         markers.push(marker_public_art);
       });
     };
@@ -153,17 +146,17 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       var directions_service = new google.maps.DirectionsService();
       var directionsDisplay = new google.maps.DirectionsRenderer();
           directionsDisplay.setMap(map);
-         
+
       var directionsRequest = {
           origin: new google.maps.LatLng(pos1[0], pos1[1]),
           destination: new google.maps.LatLng(pos2[0], pos2[1]),
           travelMode: google.maps.TravelMode.BICYCLING,
-      }; 
+      };
 
       directions_service.route(directionsRequest, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(result);
-          
+
 
           miles_between = (result.routes[0].legs[0].distance.text);
           num_miles_between = parseFloat(miles_between, 10);
@@ -180,43 +173,43 @@ var myLatlng = new google.maps.LatLng(37.8044, -122.2708);
       });
       markers = [];
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(lat, lon), 
+        position: new google.maps.LatLng(lat, lon),
         map: map,
         title: "Your Starting Point"
       });
       markers.push(marker);
-      
-      $.getJSON("/get_nearby_businesses", {lat: lat, 
+
+      $.getJSON("/get_nearby_businesses", {lat: lat,
         lng: lon}).done(function(data) {
           handleBusinessResults(data, lat, lon);
       });
-      
+
       $.getJSON("/get_public_art").done(function(data) {
         handleArtResults(data, lat, lon);
       });
     }
 
-    function defineStartLatLng (results, status) { 
+    function defineStartLatLng (results, status) {
       if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
         var result = results[0];
         var lat_starting = result.geometry.location.lat();
-        
+
         var lng_starting = result.geometry.location.lng();
         getNearbyPoints(lat_starting, lng_starting);
-      } 
+      }
       else{
         console.log(status);
       }
-    }  
+    }
     var geocoder = new google.maps.Geocoder();
     var geocoderRequest = {
       address: bike.address,
-      bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat() 
-        - 2, myLatlng.lng() -2), new google.maps.LatLng(myLatlng.lat() + 
+      bounds: new google.maps.LatLngBounds(new google.maps.LatLng(myLatlng.lat()
+        - 2, myLatlng.lng() -2), new google.maps.LatLng(myLatlng.lat() +
         2, myLatlng.lng() + 2))
     };
     geocoder.geocode(geocoderRequest, defineStartLatLng);
   };
 })
-(window.bike); 
+(window.bike);
 google.maps.event.addDomListener(window, 'load', window.bike.initialize);
